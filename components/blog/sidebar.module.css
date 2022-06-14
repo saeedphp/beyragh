@@ -1,0 +1,68 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.sidebar .card{
+    margin-top: 1.5rem;
+}
+
+.title{
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: right;
+    color: #403C49;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed rgba(8, 143, 74, 1);
+    width: 90%;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+}
+
+.title span{
+    display: flex;
+}
+
+.list{
+    padding: 0 1rem;
+}
+
+.item{
+    margin-bottom: 1.2rem;
+    transition: all .4s ease-in-out;
+}
+
+.item:hover a{
+    transform: translateX(-1rem);
+}
+
+.item a{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #403C49;
+    position: relative;
+    width: 100%;
+    display: block;
+    right: 2rem;
+}
+
+.item a::before{
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 2px;
+    border-radius: 1px;
+    background: rgba(8, 143, 74, 1);
+    display: block;
+    right: -2rem;
+    top: 50%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .sidebar{
+        width: 100%;
+    }
+}

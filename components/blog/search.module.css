@@ -1,0 +1,32 @@
+.divider{
+    background: url('../../public/images/divider.webp') no-repeat center center;
+    width: 162px;
+    height: 16px;
+    background-size: cover;
+    display: block;
+    margin: 1rem auto;
+}
+
+.search{
+    background: #F2F2F2;
+    border: 1px solid #088F4A;
+    box-sizing: border-box;
+    border-radius: 5.79572px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.search input{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 90%;
+}
+
+.search span{
+    display: flex;
+    cursor: pointer;
+}

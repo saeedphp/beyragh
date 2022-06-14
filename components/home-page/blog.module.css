@@ -1,0 +1,41 @@
+.blog{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 2rem 4rem;
+}
+
+.blog .row-top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog .row-top .title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: right;
+    color: #414042;
+}
+
+.blog .row-top .link{
+    background: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .blog{
+        padding: 1rem .5rem;
+    }
+    .blog .row-top .title{
+        font-size: 1rem;
+    }
+    .blog .row-top .link{
+        font-size: .7rem;
+    }
+    .blog .row-bottom{
+        overflow: hidden;
+        padding: 0 2rem;
+    }
+}

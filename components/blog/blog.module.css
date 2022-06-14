@@ -1,0 +1,16 @@
+.blog {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media (max-width: 768px){
+    .blog{
+        padding: 1rem .5rem;
+        flex-direction: column-reverse;
+    }
+}

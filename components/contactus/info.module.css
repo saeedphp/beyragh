@@ -1,0 +1,43 @@
+.wrapper{
+    background: url(../../public/images/wrapper-address.webp) no-repeat center center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.wrapper .title{
+    font-weight: 600;
+    font-size: 19px;
+    color: rgba(64, 60, 73, 0.98);
+    padding-top: 2rem;
+}
+
+.address{
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem 0;
+    width: 70%;
+}
+
+.address p{
+    margin: 0;
+    color: rgba(64, 60, 73, 0.98);
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.socials li{
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.socials li svg path{
+    fill: #088F4A;
+}

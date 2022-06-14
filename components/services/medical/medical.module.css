@@ -1,0 +1,132 @@
+.doctors {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.doctors .sidebar {
+    width: 30%;
+}
+
+.doctors .main {
+    width: 70%;
+}
+
+.doctors .main .top {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.doctors .main .top .search {
+    background: rgba(196, 196, 196, 0.38);
+    opacity: 0.6;
+    border-radius: 5.04348px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.doctors .main .top .search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: -webkit-fill-available;
+}
+
+.doctors .main .top .search input::placeholder {
+    color: #4F4F4F;
+}
+
+.doctors .main .top .search span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.doctors .main .top .btn {
+    width: 30%;
+}
+
+.doctors .main .top .btn .button {
+    background: rgba(0, 164, 237, 1) !important;
+    justify-content: space-evenly;
+}
+
+.items {
+    display: flex;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.list {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #FFFEFE;
+    box-shadow: 0px 1px 11px rgb(0 0 0 / 13%);
+    border-radius: 8px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.info .person {
+    display: flex;
+    align-items: center;
+}
+
+.info .person > span {
+    width: 100px;
+    border: 6px solid rgba(0, 164, 237, 1) !important;
+    border-radius: 50%;
+}
+
+.info .person .data {
+    margin-right: 1rem;
+}
+
+.data h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: right;
+    color: #4F4F4F;
+    margin: 0;
+}
+
+.data h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: right;
+    color: #4F4F4F;
+    margin: 0;
+}
+
+.address {
+    background: rgba(196, 196, 196, 0.38);
+    opacity: 0.6;
+    padding: 0.5rem 2rem;
+    display: flex;
+}
+
+.address svg {
+    margin-left: 1rem;
+}

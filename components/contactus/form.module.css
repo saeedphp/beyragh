@@ -1,0 +1,67 @@
+.form{
+    width: 100%;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 18px;
+    color: #088F4A;
+    text-align: center;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.controls > div.control{
+    width: 48% !important;
+}
+
+.control{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.control input{
+    background: rgba(8, 143, 74, 0.07);
+    border: 0.481308px solid #088F4A;
+    box-sizing: border-box;
+    border-radius: 7.70093px;
+    height: 50px;
+    padding-right: 1rem;
+}
+
+.control textarea{
+    background: rgba(8, 143, 74, 0.07);
+    border: 0.5px solid #088F4A;
+    box-sizing: border-box;
+    border-radius: 8px;
+    resize: none;
+    height: 300px;
+    padding: .8rem;
+}
+
+.control label{
+    font-weight: 600;
+    font-size: 13px;
+    color: rgba(64, 60, 73, 0.98);
+    margin-bottom: .3rem;
+}
+
+.btn{
+    width: 100%;
+    margin: .5rem 0;
+}
+
+@media (max-width: 768px) {
+    .controls{
+        display: block;
+    }
+    .controls > div.control{
+        width: 100% !important;
+    }
+}

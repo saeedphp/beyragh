@@ -1,0 +1,30 @@
+.blog-items{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.blog-items > div{
+    width: 30%;
+    margin: 0 1rem 1rem;
+    padding: 1rem 0.9rem !important;
+}
+
+.blog-items > div h2{
+    font-size: .8rem !important;
+}
+
+.blog-items > div p{
+    font-size: 9.5px !important;
+}
+
+@media (max-width: 768px) {
+    .blog-items{
+        width: 100%;
+    }
+    .blog-items > div{
+        width: 100%;
+    }
+}

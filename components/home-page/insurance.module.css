@@ -1,0 +1,74 @@
+.insurance{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.insurance .card{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url(../../public/images/service-patter.webp), linear-gradient(269.54deg, #088F4A -10.81%, #48C32A 157.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+    border-radius: 8.08928px;
+}
+
+.insurance .card::before{
+    content: "";
+    position: absolute;
+    background: url(../../public/images/service-bg.webp) no-repeat;
+    width: 394px;
+    height: 591px;
+    display: block;
+    right: -18rem;
+}
+
+.insurance .card .title{
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.insurance .box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 3.5rem;
+}
+
+@media (max-width: 768px) {
+    .insurance{
+        padding: 8rem 0.5em 1rem;
+    }
+    .insurance .card{
+        width: 100%;
+    }
+    .insurance .card::before{
+        display: none;
+    }
+    .insurance .card::after{
+        content: "";
+        position: absolute;
+        background: url(../../public/images/service-bg-mobile.webp) no-repeat center top;
+        width: 315px;
+        height: 394px;
+        top: -9.5rem;
+        background-size: contain;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .insurance .card .title{
+        margin-top: 3rem;
+    }
+    .insurance .box{
+        flex-wrap: wrap;
+        padding: 0 .5rem;
+    }
+}

@@ -1,0 +1,34 @@
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4rem;
+    background: #fff;
+}
+
+.footer-bottom .items{
+    display: flex;
+    width: 100%;
+}
+
+.footer-bottom .items:last-child{
+    justify-content: flex-end;
+}
+
+.footer-bottom .items:nth-child(2){
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom{
+        padding: 1rem .5rem;
+    }
+    .footer-bottom p{
+        font-size: .6rem;
+    }
+    .footer-bottom a{
+        margin-right: .3rem;
+        font-size: .6rem;
+    }
+}

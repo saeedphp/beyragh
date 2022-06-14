@@ -1,0 +1,30 @@
+.faq{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+}
+
+.faq .title{
+    background: url(../../public/images/faq-bg.webp) no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 305px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq .title h1{
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #414042;
+}
+
+@media (max-width: 768px) {
+    .faq{
+        padding: 1rem .5rem;
+    }
+}

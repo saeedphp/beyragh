@@ -1,0 +1,68 @@
+.service{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service a{
+    width: 180px;
+    transition: all .4s ease-in-out;
+}
+
+.service a:hover{
+    transform: translateY(-1rem);
+}
+
+.items{
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.5rem 1rem;
+    justify-content: center;
+}
+
+.items .title{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.service span{
+    width: 76px !important;
+}
+
+@media (max-width: 768px) {
+
+    .service{
+        padding: 1rem .5rem;
+    }
+
+    .service a{
+        width: 25%;
+    }
+
+    .service span{
+        width: 40px !important;
+    }
+
+    .items{
+        margin: 0 0.1rem 1rem;
+    }
+
+    .items .title{
+        font-size: .7rem;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    .service a{
+        width: 25%;
+    }
+
+}

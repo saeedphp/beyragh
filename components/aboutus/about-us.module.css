@@ -1,0 +1,54 @@
+.aboutus {
+    position: relative;
+    width: 100%;
+    height: 708px;
+    padding: 2rem 4rem;
+    margin-bottom: 8rem;
+    background: url(../../public/images/about-bg.webp) no-repeat center top;
+    background-size: cover;
+}
+
+.aboutus span {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: absolute;
+    top: 5rem;
+    width: 40%;
+    padding: 3rem 4.99rem;
+    right: 7rem;
+    background: rgb(255 255 255 / 92%) !important;
+}
+
+.wrapper .title {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #088F4A;
+    text-align: center;
+}
+
+.wrapper .desc {
+    color: rgba(79, 79, 79, 1);
+    font-size: 1.18rem;
+    text-align: justify;
+    line-height: 2rem;
+    text-align-last: center;
+}
+
+@media (max-width: 768px) {
+    .aboutus{
+        padding: 1rem .5rem;
+    }
+    .wrapper{
+        width: 80%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        padding: 1rem;
+    }
+    .wrapper .desc{
+        font-size: .7rem;
+    }
+}

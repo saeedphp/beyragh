@@ -1,0 +1,38 @@
+.contactus{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.contactus .info{
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FCFBFD;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 9%), 0px -5px 13px rgb(0 0 0 / 9%);
+    border-radius: 8px;
+    margin: 0 4rem 0;
+    z-index: 9;
+    position: relative;
+    transform: translateY(-25%);
+
+}
+
+.contactus .info > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contactus .info{
+        flex-direction: column-reverse;
+        padding: 1rem .5rem;
+        margin: 0 1rem 0;
+    }
+}
