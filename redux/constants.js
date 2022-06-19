@@ -1,0 +1,1 @@
+export const serverUrl = 'https://beyragh.faradns.ir/api/v1.0/';

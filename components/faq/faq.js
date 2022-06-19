@@ -1,11 +1,20 @@
-import {Fragment, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 import styles from './faq.module.css';
 import {allFaqs} from "../../data/faq";
 import FaqItem from "./faq-item";
+import { connect } from "react-redux";
+import { publicApi } from "../../redux/actions";
 
-const Faq = () => {
+const Faq = ({
+    getFaqs,
+    faqs
+}) => {
 
-    const items = allFaqs();
+    useEffect(() => {
+        getFaqs();
+    }, [])
+    const staticItems = allFaqs();
+    const items = [...staticItems, ...faqs]
 
     return (
         <Fragment>
@@ -31,5 +40,11 @@ const Faq = () => {
         </Fragment>
     )
 };
+const mapStateToProps = state => ({
+    faqs: state.publicApi.faqs
+});
+const mapDispatchToProps ={
+    getFaqs: publicApi.getFaqs,
+}
 
-export default Faq;
+export default connect(mapStateToProps, mapDispatchToProps)(Faq);

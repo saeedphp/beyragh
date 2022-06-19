@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production next start",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.1.7-canary.41",
+    "axios": "^0.27.2",
+    "next": "^12.1.6",
+    "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^8.0.2",
