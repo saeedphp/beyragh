@@ -6,10 +6,12 @@ import MedicalSignup from "../../icons/medical-signup";
 import Image from "next/image";
 import img from '../../../public/images/services/medical/doctors/1.webp';
 import AddressList from "../../icons/address-list";
+import PageHeader from "../../ui/page-header";
 
 const Medical = () => {
     return (
       <Fragment>
+          <PageHeader title=" امکانات فرهنگی تفریحی" pageTitle="خدمات" pageLink="/" />
           <section className={styles.doctors}>
               <div className={styles.sidebar}>
                   sidebar

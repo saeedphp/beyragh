@@ -1,0 +1,8 @@
+.location{
+    background: rgba(253, 186, 51, 0.14);
+    border: 1px solid #FAB300;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -8,7 +8,7 @@ const BlogItem = (props) => {
 
     const {id, image, title, description, category, date} = props;
     const imgPath = `${image}`;
-    const link = `/${id}`;
+    const link = `/blog/${id}`;
 
     return (
         <div className={styles.items}>

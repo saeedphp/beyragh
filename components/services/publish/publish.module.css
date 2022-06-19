@@ -1,0 +1,71 @@
+.main{
+    padding: 2rem 4rem;
+}
+
+.publish{
+    position: relative;
+    padding: 9rem 4rem;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.publish > div{
+    width: 33%;
+}
+
+.publish .title{
+    color: #088F4A;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.publish form{
+    position: relative;
+    z-index: 9;
+}
+
+.publish .controls{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.publish .controls label{
+    margin-bottom: .5rem;
+    color: #4F4F4F;
+    font-size: .9rem;
+}
+
+.controls input{
+    background: rgba(8, 143, 74, 0.06);
+    border: 1.21504px solid rgba(8, 143, 74, 0.17);
+    border-radius: 6.07519px;
+    padding: 10px;
+}
+
+.controls textarea{
+    background: rgba(8, 143, 74, 0.06);
+    border: 1.21504px solid rgba(8, 143, 74, 0.17);
+    border-radius: 6.07519px;
+    padding: 10px;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .main{
+        padding: .5rem 1rem !important;
+    }
+    .publish{
+        padding: 4rem 1rem !important;
+        display: block;
+    }
+    .publish .title{
+        font-size: 1rem;
+    }
+    .publish > div{
+        width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+.dropdown{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select.dropdown::-ms-expand {
+    display: none;
+}

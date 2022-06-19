@@ -1,0 +1,62 @@
+.insurance{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 2rem 4rem;
+}
+
+.bg{
+    padding: 10rem 0;
+}
+
+.btnList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    position: relative;
+    z-index: 9;
+    margin: auto;
+    flex: 1 1 150px;
+    justify-content: space-between;
+}
+
+.btnList li{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow-y: hidden;
+    padding: .5rem 1rem;
+    width: 150px;
+    font-size: .8rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content{
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+    .insurance{
+        padding: .5rem 1rem;
+    }
+    .bg{
+        padding: 5rem 0 !important;
+    }
+    .btnList{
+        padding: 0 1rem;
+        width: fit-content;
+        justify-content: center;
+    }
+    .btnList li{
+        width: 230px !important;
+        margin-bottom: 1rem;
+    }
+    .content{
+        width: 90%;
+    }
+}

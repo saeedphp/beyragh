@@ -5,26 +5,26 @@ import BreadcrumbArrow from "../icons/breadcrumb-arrow";
 import Home from "../icons/home";
 import bg1 from '../../public/images/page-header/medical.webp';
 
-const PageHeader = ({title,bg,pageTitle,pageLink}) => {
+const PageHeader = ({title, pageTitle, pageLink, image}) => {
 
     return (
         <>
-            <div style={{ backgroundImage: `url(${bg})` }}>
-                <h2>
+            <div className={styles.pageHeader} style={{backgroundImage: `url(../../images/page-header/${image})`}}>
+                <h2 className={styles.title}>
                     {title}
                 </h2>
-                <ul>
+                <ul className={styles.list}>
                     <li>
                         <Link href="/">
                             <a>
-                                <Home />
+                                <Home/>
                             </a>
                         </Link>
                     </li>
 
                     {pageTitle != "" &&
                         <>
-                            <BreadcrumbArrow />
+                            <BreadcrumbArrow/>
                             <li>
                                 <Link href={pageLink}>
                                     {pageTitle}
@@ -32,12 +32,11 @@ const PageHeader = ({title,bg,pageTitle,pageLink}) => {
                             </li>
                         </>
                     }
-                    <BreadcrumbArrow />
+                    <BreadcrumbArrow/>
                     <li>
                         {title}
                     </li>
                 </ul>
-                <Image src={bg} alt={title} layout={"fill"} />
             </div>
         </>
     )

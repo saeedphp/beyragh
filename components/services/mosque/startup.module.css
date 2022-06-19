@@ -1,0 +1,119 @@
+.startup{
+    position: relative;
+    padding: 2rem 4rem;
+    height: auto;
+    margin: 2rem;
+}
+
+.startup .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.startup .top h2{
+    color: #414042;
+    font-size: 1rem;
+}
+
+.startup .top .btn{
+    width: 200px;
+}
+
+.business{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.business .business_header{
+    background: #949494;
+    box-shadow: 0 4px 8px rgba(8, 143, 74, 0.17);
+    border-radius: 4px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.business .business_header .title{
+    width: 20%;
+}
+
+.business .business_header .founder{
+    width: 20%;
+}
+
+.business .business_header .desc{
+    width: 60%;
+}
+
+.business .business_header p{
+    color: #fff;
+    display: inline-block;
+}
+
+.business .business__body{
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.business .business__body::-webkit-scrollbar{
+    background: #C4C4C4;
+    width: 10px;
+    border-radius: 1rem;
+    direction: rtl;
+}
+
+.business .business__body::-webkit-scrollbar-thumb{
+    background: #088F4A;
+    border-radius: .7rem;
+}
+
+.business .business__body .item{
+    width: 100%;
+    padding: .5rem 1rem;
+}
+
+.business .business__body .item:nth-child(odd){
+    background: rgba(252, 251, 253, 0.51);
+}
+
+.business .business__body .item:nth-child(even){
+    background: rgba(239, 239, 239, 0.64);
+}
+
+.business .business__body .item p{
+    display: inline-block;
+    margin: 0;
+}
+
+.business .business__body .item p:first-child{
+    width: 20%;
+    display: inline-flex !important;
+    align-items: center;
+}
+
+.business .business__body .item p:last-child{
+    width: 20%;
+}
+
+.business .business__body .item p:nth-child(2){
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .startup{
+        padding: .5rem 1rem;
+        margin: .5rem;
+    }
+    .business{
+        display: none;
+    }
+    .startup .top{
+        flex-direction: column-reverse;
+    }
+    .startup .top .btn{
+        width: 100%;
+        padding: 1rem;
+    }
+}
