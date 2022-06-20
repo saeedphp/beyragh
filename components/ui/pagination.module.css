@@ -1,0 +1,35 @@
+.list{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+    margin-top: 1rem;
+}
+
+.list ul{
+    display: flex;
+    align-items: center;
+}
+
+.list ul li{
+    margin: 0 0.8rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list span{
+    background: rgba(241, 242, 242, 0.89);
+    border-radius: 9.28355px;
+    padding: 8px 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

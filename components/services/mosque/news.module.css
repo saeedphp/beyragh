@@ -1,0 +1,52 @@
+.news{
+    position: relative;
+    width: 100%;
+}
+
+.news .title{
+    text-align: right;
+    color: #403C49;
+    font-size: 1rem;
+}
+
+.news .main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.news .main .blogs{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news .main .sidebar{
+    width: 25%;
+}
+
+.sidebar h2{
+    background: #FAB300;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.sidebar ul{
+    margin: 1rem auto;
+    padding-right: 0.2rem;
+    border-right: 1px solid #ccc;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .news .main .blogs{
+        width: 100%;
+    }
+    .news .main .sidebar{
+        width: 100%;
+        margin: 2rem 0;
+    }
+}

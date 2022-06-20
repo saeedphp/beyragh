@@ -1,0 +1,33 @@
+.entertainment{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+}
+
+.entertainment .search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    background: rgba(196, 196, 196, 0.11);
+    border: 1px solid rgba(0, 0, 0, 0.44);
+    border-radius: 6px;
+}
+
+.entertainment .search .btn{
+    background: #FAB300;
+    border-radius: 4px;
+    width: 20%;
+    margin: 7px 10px;
+    padding: 11px;
+}
+
+ .entertainment .search input{
+     outline: none;
+     border: none;
+     padding-right: 1rem;
+     background: transparent;
+     width: 80%;
+ }

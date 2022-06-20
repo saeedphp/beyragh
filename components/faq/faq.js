@@ -1,11 +1,15 @@
-import {Fragment, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 import styles from './faq.module.css';
 import {allFaqs} from "../../data/faq";
 import FaqItem from "./faq-item";
+import { connect } from "react-redux";
+const Faq = ({}) => {
 
-const Faq = () => {
+    useEffect(() => {
 
-    const items = allFaqs();
+    }, [])
+    const staticItems = allFaqs();
+    const items = [...staticItems]
 
     return (
         <Fragment>
@@ -32,4 +36,6 @@ const Faq = () => {
     )
 };
 
-export default Faq;
+   
+
+export default (Faq);

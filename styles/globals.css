@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -20,7 +24,11 @@ body *, body :after, body :before, body :hover {
   transition: .4s;
 }
 
+<<<<<<< HEAD
 a,span,ul,li,p,button,h1,h2,h3,h4,h5,h6,input::placeholder, input, textarea, label, time, address{
+=======
+a,span,li,p,button,h1,h2,h3,h4,h5,h6,input::placeholder, input, textarea, label, time, address, select, option{
+>>>>>>> 2a0efbbc24317269209a634dc2500d001aa6e7fc
   font-family: IRANYekan;
   font-style: normal;
 }
@@ -242,6 +250,39 @@ footer{
 .txt-success{
   color: #0f0;
   font-size: .8rem;
+}
+
+.pagination li.active{
+  background: linear-gradient(84.75deg, #FFB112 14.89%, rgba(253, 186, 51, 0.66) 183.44%);
+  opacity: 0.82;
+  backdrop-filter: blur(49.8061px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 64.455px;
+  color: #fff;
+}
+
+/*entertainment single styles*/
+
+#entertainment_detail{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#entertainment_detail .detail_top{
+  display: flex;
+}
+
+/*entertainment single styles*/
+
+.insuranceBtn li.active{
+  background: #088F4A;
+  border: 1px solid #088F4A;
+  color: #fff;
 }
 
 @media (max-width: 1200px) {

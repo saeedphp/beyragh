@@ -1,0 +1,36 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.item::before{
+    content: "";
+    position: absolute;
+    background: url('../../../public/images/bullet-blog.png') no-repeat;
+    width: 16px;
+    height: 16px;
+    right: -28px;
+    top: 0;
+    display: block;
+    z-index: 3;
+}
+
+/*.item::after{
+    content: "";
+    position: absolute;
+    background: #ccc;
+    width: 2px;
+    height: 3rem;
+    right: -21px;
+    top: 0;
+    display: block;
+    z-index: 2;
+}*/
+
+.item span{
+    color: #4F4F4F;
+    font-size: 10px;
+}

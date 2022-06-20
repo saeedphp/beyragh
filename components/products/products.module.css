@@ -1,0 +1,30 @@
+.products{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products .sidebar{
+    width: 25%;
+}
+
+.products .content{
+    width: 75%;
+}
+
+@media (max-width: 768px) {
+    .products{
+        padding: .5rem 1rem;
+        flex-direction: column;
+    }
+    .products .sidebar{
+        width: 100%;
+    }
+
+    .products .content{
+        width: 100%;
+    }
+}

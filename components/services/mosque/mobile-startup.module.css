@@ -1,0 +1,28 @@
+.list {
+    position: relative;
+    padding: .5rem 1rem;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.list > span{
+    width: 25%;
+}
+
+.list::-webkit-scrollbar{
+    background: #C4C4C4;
+    width: 10px;
+    border-radius: 1rem;
+    direction: rtl;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: #088F4A;
+    border-radius: .7rem;
+}
+
+@media (min-width: 769px) {
+    .list{
+    display: none;
+    }
+}

@@ -5,20 +5,35 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": " next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.1.1",
+    "@reduxjs/toolkit": "^1.8.2",
+    "axios": "^0.27.2",
+    "next": "^12.1.6",
+    "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+<<<<<<< HEAD
     "react-icons": "^4.4.0",
     "react-slick": "^0.28.1",
+=======
+    "react-redux": "^8.0.2",
+    "react-share": "^4.4.0",
+    "react-slick": "^0.28.1",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+>>>>>>> 2a0efbbc24317269209a634dc2500d001aa6e7fc
     "slick-carousel": "^1.8.1",
     "swiper": "^8.2.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
     "eslint": "8.12.0",
-    "eslint-config-next": "12.1.1"
+    "eslint-config-next": "12.1.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.3"
   }
 }

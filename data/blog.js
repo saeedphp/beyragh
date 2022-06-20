@@ -20,7 +20,7 @@ const DUMMY_DATA = [
         image: 'images/blog/blog-3.webp',
         title: 'برگزاری هیئت و مجالس عزاداری',
         description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.  چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآن چنان که لازم استو برای شرایط فعلی تکنولوژی مورد نیاز و کاربرد های متنوع با هدف بهبود ابزارهای کاربردی می باشد.',
-        category: 'اخبار و رویداد ها',
+        category: 'تکتولوژی',
         date: '2021-12-03',
     },
     {
@@ -36,3 +36,11 @@ const DUMMY_DATA = [
 export const allBlogs = () => {
     return DUMMY_DATA;
 };
+
+export function getPostById(id) {
+    return DUMMY_DATA.find((event) => event.id === id);
+}
+
+export function getNews() {
+    return DUMMY_DATA.filter((event) => event.category==='اخبار و رویداد ها');
+}

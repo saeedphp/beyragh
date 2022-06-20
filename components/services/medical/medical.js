@@ -6,14 +6,19 @@ import MedicalSignup from "../../icons/medical-signup";
 import Image from "next/image";
 import img from '../../../public/images/services/medical/doctors/1.webp';
 import AddressList from "../../icons/address-list";
+<<<<<<< HEAD
 import Sidebar from "../../layout/sidebar/sidebar";
 import { FaStethoscope } from 'react-icons/fa';
 import { Doctors, Takhasos } from "../../../data/medical";
+=======
+import PageHeader from "../../ui/page-header";
+>>>>>>> 2a0efbbc24317269209a634dc2500d001aa6e7fc
 
 const Medical = () => {
     const AllDoctors = Doctors();
     return (
       <Fragment>
+          <PageHeader title=" امکانات فرهنگی تفریحی" pageTitle="خدمات" pageLink="/" />
           <section className={styles.doctors}>
               <div className={styles.sidebarbox}>
                 <Sidebar className={styles.sidebar} data={Takhasos} title={"تخصص"} icon={<FaStethoscope />} 

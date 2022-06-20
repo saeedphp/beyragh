@@ -1,0 +1,98 @@
+.entrepreneur{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 4rem 4rem;
+    background: url(../../../public/images/entrepreneur-bg.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    max-width: 80rem;
+    box-shadow: 2px 2px 15px #ccc;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+/*.entrepreneur::before{
+    content: "";
+    position: absolute;
+    background: url(../../../public/images/left-forn-bg.png) no-repeat;
+    background-size: cover;
+    left: 0;
+    bottom: 0;
+}*/
+
+.entrepreneur form{
+    width: 100%;
+}
+
+.entrepreneur .title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #088F4A;
+}
+
+.entrepreneur .controls{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto 1rem;
+}
+
+.entrepreneur .controls label{
+    color: #4F4F4F;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+.entrepreneur .controls input{
+    background: rgba(8, 143, 74, 0.06);
+    border: 1.21504px solid rgba(8, 143, 74, 0.17);
+    border-radius: 6.07519px;
+    position: relative;
+    padding: 10px;
+}
+
+.entrepreneur .controls input::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #0f0;
+    display: block;
+}
+
+.entrepreneur .controls textarea{
+    background: rgba(8, 143, 74, 0.06);
+    border: 1.21504px solid rgba(8, 143, 74, 0.17);
+    border-radius: 6.07519px;
+    position: relative;
+    padding: 10px;
+    height: 150px;
+}
+
+.entrepreneur .submit{
+    width: 320px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .entrepreneur{
+        padding: .5rem 1rem;
+        max-width: unset;
+    }
+    .entrepreneur .title{
+        font-size: 1rem;
+    }
+    .entrepreneur form{
+        width: auto;
+    }
+    .entrepreneur .controls{
+        padding: 0 1rem;
+    }
+}
