@@ -15,7 +15,7 @@ const ChooseCategory = ({ categories, nextStep, changeCategory }) => {
         انتخاب دسته بندی
       </p>
       {categories.map((item, idx) => (
-        <div className="w-full  flex items-center flex-col  border-t py-5 px-3 border-gray-300">
+        <div className="w-full  flex items-center flex-col  border-t py-5 px-3 border-gray-300" key={`ADS_MAIN_CAT__${item.id}`}>
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center text-primaryBlack text-lg">
               <span className={`text-3xl text-red49 ml-2 `}>{item.icon}</span>
@@ -51,7 +51,7 @@ const ChooseCategory = ({ categories, nextStep, changeCategory }) => {
           {showSubCats == item.id && (
             <div className="flex w-full flex-col py-3 px-10">
               {item.relatedCats.map((relatedCat, idx) => (
-                <p className="text-sm my-2 cursor-pointer text-secondaryBlack" onClick={() => {
+                <p className="text-sm my-2 cursor-pointer text-secondaryBlack" key={`ADS_CAT__${relatedCat.id}__${item.id}`} onClick={() => {
                     nextStep();
                     changeCategory({
                         id: relatedCat.id,

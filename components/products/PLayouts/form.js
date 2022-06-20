@@ -2,6 +2,7 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import {BiEdit} from 'react-icons/bi';
 import Input from "../../form/input";
+import Select from "../../form/select";
 
 const SubmitProclamation = ({choosedCategory, choosedCatParentId, categories, lastStep}) => {
     const categoryTitle = choosedCatParentId == null ? categories.find(itm => itm.id == choosedCategory).title : 
@@ -22,8 +23,11 @@ const SubmitProclamation = ({choosedCategory, choosedCatParentId, categories, la
             
         </button>
       </div>
-        <form className="w-full">
+        <form className="w-full flex flex-col mt-6">
             <Input title="عنوان و نام محصول" />
+            <Input title="شماره تماس" />
+            <Select title="استان - شهر" />
+            <Select title="محدوده آگهی" />
         </form>
 
         </div>
