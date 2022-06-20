@@ -27,6 +27,7 @@ const Detail = ({ Pid }) => {
                     title: "",
                     value: "",
                     unit: "",
+                    description: ""
                 },
             ]
         }

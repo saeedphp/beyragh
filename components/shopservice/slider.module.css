@@ -17,7 +17,7 @@
 
 #silderorigin .imgorigin .right svg,
 #silderorigin .imgorigin .left svg {
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 #silderorigin .imgorigin .right {
     position: absolute;
@@ -62,14 +62,21 @@
 }
 
 #silderorigin .box_miniimg .miniimg {
-    width: 8rem;
-    height: 5rem;
+    width: clamp(6rem, 8vw, 8rem);
+    height: clamp(3rem, 5vw, 5rem);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     border-radius: .4rem;
     overflow: hidden;
     margin: 0.3rem .5rem !important;
+}
+
+
+#silderorigin .box_miniimg .miniimg img {
+    width: clamp(6rem, 8vw, 8rem) !important;
+    height: clamp(3rem, 5vw, 5rem) !important;
+    object-fit: fill !important;
 }
 
 #silderorigin .box_miniimg .miniimg:hover {

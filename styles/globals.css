@@ -24,11 +24,8 @@ body *, body :after, body :before, body :hover {
   transition: .4s;
 }
 
-<<<<<<< HEAD
-a,span,ul,li,p,button,h1,h2,h3,h4,h5,h6,input::placeholder, input, textarea, label, time, address{
-=======
+
 a,span,li,p,button,h1,h2,h3,h4,h5,h6,input::placeholder, input, textarea, label, time, address, select, option{
->>>>>>> 2a0efbbc24317269209a634dc2500d001aa6e7fc
   font-family: IRANYekan;
   font-style: normal;
 }

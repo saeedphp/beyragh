@@ -16,11 +16,11 @@ export default function Slider({ Imgs }) {
         </div>
 
         <div className={styles.box_miniimg}>
-                {Imgs.map((item, index) => (
-                    <div className={styles.miniimg} onClick={() => setMainImage(index)} >
-                        <Image src={item.img} />
-                    </div>
-                ))}
+            {Imgs.map((item, index) => (
+              <div className={styles.miniimg} onClick={() => setMainImage(index)} >
+                <Image src={item.img} />
+              </div>
+            ))}
         </div>
 
     </div>

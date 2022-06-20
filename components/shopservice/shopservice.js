@@ -19,7 +19,6 @@ const ShopService = () => {
     const Products = AllShopData();
     const Cities = allCity();
 
-    const [city, setCity] = useState('');
     const [items, setItems] = useState(Products);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
