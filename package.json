@@ -15,17 +15,13 @@
     "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-<<<<<<< HEAD
     "react-icons": "^4.4.0",
-    "react-slick": "^0.28.1",
-=======
     "react-redux": "^8.0.2",
     "react-share": "^4.4.0",
     "react-slick": "^0.28.1",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
->>>>>>> 2a0efbbc24317269209a634dc2500d001aa6e7fc
     "slick-carousel": "^1.8.1",
     "swiper": "^8.2.4"
   },
