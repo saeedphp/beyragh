@@ -1,4 +1,4 @@
-.doctors {
+.legal {
     position: relative;
     width: 100%;
     height: auto;
@@ -8,23 +8,23 @@
     align-items: flex-start;
 }
 
-.doctors .sidebarbox {
+.legal .sidebarbox {
     width: 25%;
     padding: 0;
 }
 
-.doctors .main {
+.legal .main {
     width: 70%;
 }
 
-.doctors .main .top {
+.legal .main .top {
     width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-.doctors .main .top .search {
+.legal .main .top .search {
     background: rgba(196, 196, 196, 0.38);
     opacity: 0.6;
     border-radius: 5.04348px;
@@ -34,30 +34,35 @@
     padding: 0 2rem;
 }
 
-.doctors .main .top .search input {
+.legal .main .top .search input {
     background: transparent;
     border: none;
     outline: none;
     width: -webkit-fill-available;
 }
 
-.doctors .main .top .search input::placeholder {
+.legal .main .top .search input::placeholder {
     color: #4F4F4F;
 }
 
-.doctors .main .top .search span {
+.legal .main .top .search span {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.doctors .main .top .btn {
+.legal .main .top .btn {
     width: 30%;
 }
 
-.doctors .main .top .btn .button {
-    background: rgba(0, 164, 237, 1) !important;
+.legal .main .top .btn .button {
+    background: #071D4C !important;
     justify-content: space-evenly;
+    font-size: .8rem;
+    padding: .7rem;
+}
+.legal .main .top .btn .button svg {
+    width: 1.5rem;
 }
 
 .items {
@@ -94,14 +99,9 @@
     align-items: center;
 }
 
-.info button {
-    background: rgba(62, 195, 255, 0.41);
-    color: #0095D9;
-}
-
 .info .person > span {
     width: 100px;
-    border: 6px solid rgba(0, 164, 237, 1) !important;
+    border: 6px solid #071D4C !important;
     border-radius: 50%;
 }
 
@@ -109,6 +109,17 @@
     margin-right: 1rem;
 }
 
+.info button {
+    color: #112553;
+    background: #9EA6B9;
+    font-size: .9rem;
+    font-family: IRANYekan !important;
+}
+.info button span {
+    font-weight: 700 !important;
+    font-family: IRANYekan !important;
+    margin-right: .5rem;
+}
 .data h2 {
     font-weight: 700;
     font-size: 18px;
@@ -132,16 +143,22 @@
     opacity: 0.6;
     padding: 0.5rem 2rem;
     display: flex;
+    font-size: .85rem;
 }
 
 .address svg {
     margin-left: 1rem;
 }
+.address svg path {
+    margin-left: 1rem;
+    fill: #071D4C !important;
+}
 
 .sidebar ul::-webkit-scrollbar-thumb {
-    background-color: #00B0FF !important;
+    background-color: #283B63 !important;
 }
+
 .sidebar h5 {
-    background: rgba(62, 195, 255, 0.41);
-    color: #00B0FF;
+    background: #C5C9D5;
+    color: #071D4C;
 }

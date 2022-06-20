@@ -1,24 +1,21 @@
-import {Fragment} from "react";
-import styles from './medical.module.css';
-import SearchFilter from "../../icons/search-filter";
-import Button from "../../ui/button";
-import MedicalSignup from "../../icons/medical-signup";
 import Image from "next/image";
-import img from '../../../public/images/services/medical/doctors/1.webp';
+import {Fragment} from "react";
+import { allHoghoghi, Khadamat } from "../../../data/hoghoghi";
+import { GiScales } from 'react-icons/gi';
 import AddressList from "../../icons/address-list";
+import MedicalSignup from "../../icons/medical-signup";
+import SearchFilter from "../../icons/search-filter";
 import Sidebar from "../../layout/sidebar/sidebar";
-import { FaStethoscope } from 'react-icons/fa';
-import { Doctors, Takhasos } from "../../../data/medical";
+import Button from "../../ui/button";
+import styles from './legal.module.css';
 
-const Medical = () => {
-    const AllDoctors = Doctors();
+const Legal = () => {
+    const Vakilha = allHoghoghi();
     return (
-      <Fragment>
-          <section className={styles.doctors}>
+        <Fragment>
+            <section className={styles.legal}>
               <div className={styles.sidebarbox}>
-                <Sidebar className={styles.sidebar} data={Takhasos} title={"تخصص"} icon={<FaStethoscope />} 
-                    input={true} Bcolor={"#9CDFFF"} Color={"#00B0FF"}
-                />
+                  <Sidebar className={styles.sidebar} data={Khadamat} title={"خدمات حقوقی"} icon={<GiScales />} input={true} />
               </div>
               <div className={styles.main}>
 
@@ -32,13 +29,13 @@ const Medical = () => {
                       <div className={styles.btn}>
                           <Button className={styles.button}>
                               <MedicalSignup />
-                              ثبت نام پزشکان
+                              ثبت نام ارائه دهندگان حقوقی
                           </Button>
                       </div>
                   </div>
 
                   <ul className={styles.items}>
-                      {AllDoctors.map((item) => (
+                      {Vakilha.map((item) => (
 
                         <li className={styles.list} key={item.id}>
                             <div className={styles.wrapper}>
@@ -56,7 +53,7 @@ const Medical = () => {
                                     </div>
                                     <div>
                                         <Button>
-                                            شماره تماس {item.tel}
+                                            شماره تماس <span>{item.tel}</span>
                                         </Button>
                                     </div>
                                 </div>
@@ -69,10 +66,10 @@ const Medical = () => {
                       ))}
                   </ul>
 
-              </div>
-          </section>
-      </Fragment>
-    );
-};
+                </div>
+            </section>
+        </Fragment>
+    )
+}
 
-export default Medical;
+export default Legal;
