@@ -1,49 +1,49 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { HYDRATE } from 'next-redux-wrapper';
+import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+import { HYDRATE } from "next-redux-wrapper";
+import { serverUrl } from "../constants";
 
-
-export const publicSlice = createSlice({
-  name: 'product',
+export const FaqsSlice = createSlice({
+  name: "faqs",
 
   initialState: {
-    name: null
+    faqs: [],
   },
 
   reducers: {
     setProductData: (state, action) => {
       state.name = action.payload;
-    }
+    },
+    setFaqs: (state, { type, payload }) => {
+      state.faqs = payload;
+    },
   },
 
   extraReducers: {
     [HYDRATE]: (state, action) => {
-      console.log('HYDRATE', action.payload);
+      console.log("HYDRATE", action.payload);
 
       if (!action.payload) {
         return state;
       }
-
-      state.name = action.payload.publicSlice.name;
-    // state.name = 'hydrate'
-    }
-  }
+      state.faqs = action.payload.FaqsSlice.faqs
+    
+    },
+  },
 });
 
-export const { setProductData } = publicSlice.actions;
+export const { setProductData, setFaqs } = FaqsSlice.actions;
 
 export const selectProduct = (state) => state.product;
 
-export const fetchProduct =
-    (data) =>
-      async dispatch => {
-        const timeoutPromise = (timeout) => new Promise(resolve => setTimeout(resolve, timeout));
+export const fetchFaqs = () => async (dispatch) => {
+  try {
+    let res = await axios.get(serverUrl + "cms/faq/list");
+    // console.log(res);
+    dispatch(setFaqs(res.data.result));
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-        await timeoutPromise(1000);
-
-        dispatch(
-          setProductData(data)
-        );
-      };
-
-
-export default publicSlice.reducer;
+export default FaqsSlice.reducer;

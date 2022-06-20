@@ -1,1 +1,1 @@
-export {default as publicSlice} from './public'
+export {default as FaqsSlice} from './public'

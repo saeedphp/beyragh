@@ -7,7 +7,7 @@ import Shop from "../components/home-page/shop";
 import Charity from "../components/home-page/charity";
 import Blog from "../components/home-page/blog";
 import { connect } from "react-redux";
-import { publicApi } from "../redux/actions";
+
 
 const HomePage = ({testRedux}) => {
   return (
