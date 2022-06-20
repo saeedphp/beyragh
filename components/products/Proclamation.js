@@ -7,8 +7,8 @@ import { ChooseCategory, SubmitProclamation } from "./PLayouts";
 const Proclamation = () => {
     const [steps, setSteps] = useState(0);
     const layouts = [
-        <ChooseCategory />,
-        <SubmitProclamation />,
+        <ChooseCategory nextStep={() => setSteps(steps + 1)}/>,
+        <SubmitProclamation lastStep={() => setSteps(steps - 1)}/>,
         <SubmitProclamation />
     ]
     return (

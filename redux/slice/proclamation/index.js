@@ -1,25 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { HYDRATE } from "next-redux-wrapper";
+import { adCats } from "../../../data/ads";
 import { serverUrl } from "../../constants";
 
 export const ProclamationSlice = createSlice({
   name: "Proclamation",
 
   initialState: {
-    proclamation: {
+   
         categoryId: null,
-
-    },
+        parentId: null,
+        categories: adCats,
+   
   },
 
   reducers: {
     setProductData: (state, action) => {
       state.name = action.payload;
     },
-    setFaqs: (state, { type, payload }) => {
-      state.faqs = payload;
-    },
+    setCategory: (state, {type, payload}) => {
+      state.categoryId = payload.id;
+      state.parentId = payload.parentId;
+    }
   },
 
   extraReducers: {
@@ -30,23 +33,25 @@ export const ProclamationSlice = createSlice({
         return state;
       }
       state.proclamation = action.payload.ProclamationSlice.proclamation
-    
+      
     },
   },
 });
 
-export const { setProductData, setFaqs } = ProclamationSlice.actions;
+export const { setProductData, setCategory } = ProclamationSlice.actions;
 
 export const selectProduct = (state) => state.product;
 
-export const fetchFaqs = () => async (dispatch) => {
-  try {
-    let res = await axios.get(serverUrl + "cms/faq/list");
-    // console.log(res);
-    dispatch(setFaqs(res.data.result));
-  } catch (error) {
-    console.error(error);
-  }
-};
-
+// export const fetchFaqs = () => async (dispatch) => {
+//   try {
+//     let res = await axios.get(serverUrl + "cms/faq/list");
+//     // console.log(res);
+//     dispatch(setFaqs(res.data.result));
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+export const changeCategory = (data) => async dispatch => {
+    await dispatch(setCategory(data));
+}
 export default ProclamationSlice.reducer;
