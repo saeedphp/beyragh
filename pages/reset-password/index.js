@@ -6,4 +6,5 @@ const ResetPasswordPage = () => {
     )
 };
 
+ResetPasswordPage.layout = "L1"
 export default ResetPasswordPage;

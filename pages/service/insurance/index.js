@@ -9,4 +9,5 @@ const InsurancePage = () => {
     )
 };
 
+InsurancePage.layout = "L2"
 export default InsurancePage;

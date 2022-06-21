@@ -9,4 +9,5 @@ const MedicalPage = () => {
     );
 };
 
+MedicalPage.layout = "L2"
 export default MedicalPage;

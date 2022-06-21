@@ -9,4 +9,5 @@ const PublishPage = () => {
     )
 };
 
+PublishPage.layout = "L2"
 export default PublishPage;

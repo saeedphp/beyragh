@@ -9,4 +9,5 @@ const EntertainmentPage = () => {
     )
 };
 
+EntertainmentPage.layout = "L2"
 export default EntertainmentPage;

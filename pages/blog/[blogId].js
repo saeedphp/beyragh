@@ -29,4 +29,5 @@ const BlogDetailPage = () => {
         );
 };
 
+BlogDetailPage.layout = "L1"
 export default BlogDetailPage;

@@ -6,4 +6,5 @@ const FaqPage = () => {
     );
 };
 
+FaqPage.layout = "L1"
 export default FaqPage;

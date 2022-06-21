@@ -21,4 +21,5 @@ const HomePage = () => {
   )
 };
 
-export default HomePage;
+HomePage.layout = "L1";
+export default HomePage

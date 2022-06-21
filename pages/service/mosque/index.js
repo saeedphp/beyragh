@@ -9,4 +9,5 @@ const MosquePage = () => {
     )
 };
 
+MosquePage.layout = "L2"
 export default MosquePage;

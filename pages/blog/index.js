@@ -6,4 +6,5 @@ const BlogPage = () => {
     )
 };
 
+BlogPage.layout = "L1"
 export default BlogPage;

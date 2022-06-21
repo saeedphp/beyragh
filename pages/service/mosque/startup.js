@@ -9,4 +9,5 @@ const StartupPage = () => {
     );
 };
 
+StartupPage.layout = "L2"
 export default StartupPage;

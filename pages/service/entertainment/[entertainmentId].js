@@ -204,4 +204,5 @@ const EntertainmentDetailPage = () => {
 
 };
 
+EntertainmentDetailPage.layout = "L2"
 export default EntertainmentDetailPage;
