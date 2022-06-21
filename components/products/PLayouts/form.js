@@ -47,8 +47,8 @@ const SubmitProclamation = ({choosedCategory, choosedCatParentId, categories, la
     )
 }
 const mapStateToProps = state => ({
-    choosedCategory: state.ProclamationSlice.categoryId,
-    choosedCatParentId: state.ProclamationSlice.parentId,
-    categories: state.ProclamationSlice.categories,
+    choosedCategory: state.adsReducer.choosedCat,
+    choosedCatParentId: state.adsReducer.choosedCatPId,
+    categories: state.adsReducer.categories,
 })
 export default connect(mapStateToProps)(SubmitProclamation);

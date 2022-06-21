@@ -1,10 +1,13 @@
-import {Fragment, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 import styles from './products.module.css';
 import PageHeader from "../ui/page-header";
 import Content from "./content";
 import { ChooseCategory, ProclamationSuccess, SubmitProclamation } from "./PLayouts";
+import adsActions from "../../redux/actions/ads";
+import { connect } from "react-redux";
 
-const Proclamation = () => {
+const Proclamation = ({fetchCats}) => {
+    
     const [steps, setSteps] = useState(0);
     const layouts = [
         <ChooseCategory nextStep={() => setSteps(steps + 1)} key='CHOOSE_CATEGORY_LAYOUT'/>,
@@ -20,5 +23,11 @@ const Proclamation = () => {
         </Fragment>
     )
 };
+const mapStateToProps = state => ({
+    categories: state.adsReducer.categories,
+});
+const mapDispatchToProps = {
+    fetchCats: adsActions.list,
+}
 
-export default Proclamation;
+export default connect(mapStateToProps, mapDispatchToProps)(Proclamation);

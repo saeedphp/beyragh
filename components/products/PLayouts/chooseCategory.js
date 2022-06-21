@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { adCats } from "../../../data/ads";
 import { IoIosArrowDown } from "react-icons/io";
 import { connect } from "react-redux";
-import { changeCategory } from "../../../redux/slice/proclamation";
+import adsActions from "../../../redux/actions/ads";
+// import { changeCategory } from "../../../redux/slice/proclamation";
 
-const ChooseCategory = ({ categories, nextStep, changeCategory }) => {
+const ChooseCategory = ({ categories, nextStep, chooseCategory, fetchCategories }) => {
+  useEffect(() => {
+    // fetchCategories()
+  })
   const [showSubCats, setShowSubCats] = useState(null);
   return (
     <div className=" bg-white w-1/3 max-w-3xl rounded-lg shadow-md p-6 px-10 flex flex-col items-center">
@@ -14,19 +18,16 @@ const ChooseCategory = ({ categories, nextStep, changeCategory }) => {
       <p className="w-full text-right text-lg text-gray4F font-bold my-3">
         انتخاب دسته بندی
       </p>
-      {categories.map((item, idx) => (
+      {categories?.map((item, idx) => (
         <div className="w-full  flex items-center flex-col  border-t py-5 px-3 border-gray-300" key={`ADS_MAIN_CAT__${item.id}`}>
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center text-primaryBlack text-lg">
-              <span className={`text-3xl text-red49 ml-2 `}>{item.icon}</span>
+              {/* <span className={`text-3xl text-red49 ml-2 `}>{item.icon}</span> */}
               <p
               className="cursor-pointer"
                 onClick={() => {
                   nextStep();
-                  changeCategory({
-                      id: item.id,
-                      parentId: null,
-                  });
+                  chooseCategory(item.id, null);
                 }}
               >
                 {item.title}
@@ -53,10 +54,7 @@ const ChooseCategory = ({ categories, nextStep, changeCategory }) => {
               {item.relatedCats.map((relatedCat, idx) => (
                 <p className="text-sm my-2 cursor-pointer text-secondaryBlack" key={`ADS_CAT__${relatedCat.id}__${item.id}`} onClick={() => {
                     nextStep();
-                    changeCategory({
-                        id: relatedCat.id,
-                        parentId: item.id,
-                    });
+                    chooseCategory(relatedCat.id, item.id);
                   }}>
                   {relatedCat.title}
                 </p>
@@ -70,10 +68,11 @@ const ChooseCategory = ({ categories, nextStep, changeCategory }) => {
 };
 
 const mapStateToProps = state => ({
-    categories: state.ProclamationSlice.categories,
+    categories: state.adsReducer.categories
 })
 const mapDispatchToProps = {
-    changeCategory: changeCategory,
+  chooseCategory: adsActions.chooseCategory,
+  fetchCategories: adsActions.list,
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ChooseCategory);
 

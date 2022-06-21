@@ -11,13 +11,14 @@ const Axios = axios.create({
   //headers: access ? { Authorization: `Bearer ${access}` } : {},
 });
 class DataManager {
-  get = async (url, params, opt, data) =>
+  get = async (url, params, opt, data) => 
     await this.check(
       url,
       opt,
       async () => await Axios.get(url, { params, ...opt }),
       data || params
     );
+  
   post = async (url, params, opt, data ) =>
     await this.check(
       url,
@@ -45,14 +46,16 @@ class DataManager {
     dispatch = dispatch || (() => {});
     dispatch({ type: url.split("/")[0] + "/" + "loading" });
     let response = await fetch();
+    
     switch (response.status) {
       case 200:
-        dispatch({ type: url, data: response.data.data, params });
-        return response.data.data;
+        dispatch({ type: url, payload: response.data, params });
+        console.log('STATUS 200 RES:', response.data)
+        return response.data;
       case 401:
         if (await this.refresh()) {
           let response = await fetch();
-          dispatch({ type: url, data: response.data.data, params });
+          dispatch({ type: url, payload: response.data, params });
           return response.data.data;
         }
         break;

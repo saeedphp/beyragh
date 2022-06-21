@@ -25,7 +25,7 @@ export const adCats = [
       },
       
     ],
-    icon: <BsPhone />,
+    // icon: <BsPhone />,
   },
   {
     id: 1,
@@ -33,7 +33,7 @@ export const adCats = [
     relatedCats: [
       
     ],
-    icon: <TbSofa />,
+    // icon: <TbSofa />,
   },
   {
     id: 2,
@@ -41,12 +41,12 @@ export const adCats = [
     relatedCats: [
       
     ],
-    icon: <GrGamepad />,
+    // icon: <GrGamepad />,
   },
   {
     id: 3,
     title: "مد و پوشاک",
     relatedCats: [],
-    icon: <RiTShirt2Line />,
+    // icon: <RiTShirt2Line />,
   },
 ];

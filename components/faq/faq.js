@@ -5,9 +5,7 @@ import FaqItem from "./faq-item";
 import { connect } from "react-redux";
 const Faq = ({}) => {
 
-    useEffect(() => {
 
-    }, [])
     const staticItems = allFaqs();
     const items = [...staticItems]
 

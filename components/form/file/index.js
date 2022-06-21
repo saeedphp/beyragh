@@ -75,7 +75,7 @@ const File = ({
           onDragEnter={overrideEventDefaults}
           onDragLeave={overrideEventDefaults}
           onDragOver={overrideEventDefaults}
-          for={"file" + id}
+          htmlFor={"file" + id}
           className={`flex flex-col w-full max-w-52 h-full text-center items-center  border-2 ${focus} rounded-lg py-3 cursor-pointer`}
         //   style={{ maxHeight: "200px" }}
         >
