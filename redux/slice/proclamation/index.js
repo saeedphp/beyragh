@@ -42,15 +42,6 @@ export const { setProductData, setCategory } = ProclamationSlice.actions;
 
 export const selectProduct = (state) => state.product;
 
-// export const fetchFaqs = () => async (dispatch) => {
-//   try {
-//     let res = await axios.get(serverUrl + "cms/faq/list");
-//     // console.log(res);
-//     dispatch(setFaqs(res.data.result));
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
 export const changeCategory = (data) => async dispatch => {
     await dispatch(setCategory(data));
 }

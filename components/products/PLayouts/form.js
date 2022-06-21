@@ -3,13 +3,23 @@ import { connect } from "react-redux";
 import {BiEdit} from 'react-icons/bi';
 import Input from "../../form/input";
 import Select from "../../form/select";
+import File from "../../form/file";
 
 const SubmitProclamation = ({choosedCategory, choosedCatParentId, categories, lastStep}) => {
     const categoryTitle = choosedCatParentId == null ? categories.find(itm => itm.id == choosedCategory).title : 
         categories.find(itm => itm.id == choosedCatParentId)?.relatedCats.find(itm => itm.id == choosedCategory).title;
         const parentTitle = categories.find(itm => itm.id == choosedCatParentId)?.title;
+
+        const [adPrimaryVal, setAdPrimaryVal] = useState({
+            title: '',
+            phoneNumber: '',
+            state: '',
+            city: '',
+            cityZone: '',
+            images: [],
+        })
     return (
-        <div className=" bg-white w-1/3 rounded-lg shadow-md p-6 px-10 flex flex-col items-center">
+        <div className=" bg-white w-1/3 max-w-3xl rounded-lg shadow-md p-6 px-10 flex flex-col items-center">
             <h1 className="w-full text-right font-bold text-xl text-red49">
         ثبت آگهی
       </h1>
@@ -28,6 +38,9 @@ const SubmitProclamation = ({choosedCategory, choosedCatParentId, categories, la
             <Input title="شماره تماس" />
             <Select title="استان - شهر" />
             <Select title="محدوده آگهی" />
+            <File title="آپلود عکس آگهی" onChange={(image) => setAdPrimaryVal({...adPrimaryVal, images: [...adPrimaryVal.images, image]})}
+            file={adPrimaryVal.images[0]}
+            />
         </form>
 
         </div>
