@@ -4,7 +4,7 @@ import SearchFilter from "../../icons/search-filter";
 import Button from "../../ui/button";
 import MedicalSignup from "../../icons/medical-signup";
 import Image from "next/image";
-import img from '../../../public/images/services/medical/doctors/1.webp';
+import img from '../../../public/images/services/medical/doctors/1.jpg';
 import AddressList from "../../icons/address-list";
 import PageHeader from "../../ui/page-header";
 

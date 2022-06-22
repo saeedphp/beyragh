@@ -1,11 +1,11 @@
 import {Fragment, useState} from "react";
 import Image from "next/image";
-import logo from '../../public/images/footer-logo.webp';
+import logo from '../../public/images/footer-logo.jpg';
 import Eye from "../icons/eye";
 import styles from './reset-password.module.css';
 import Reset from "../icons/reset";
-import topBg from '../../public/images/top-auth.webp';
-import bottomBg from '../../public/images/bottom-auth.webp';
+import topBg from '../../public/images/top-auth.jpg';
+import bottomBg from '../../public/images/bottom-auth.jpg';
 import Button from "../ui/button";
 import Link from "next/link";
 import PasswordChecker from "../ui/password-checker";

@@ -2,6 +2,7 @@ import {Fragment} from "react";
 import {useRouter} from "next/router";
 import {allBlogs} from "../../data/blog";
 import {allEntertainments} from "../../data/service/entertainment";
+import Detail from "../../components/blog/detail";
 
 const BlogDetailPage = () => {
 
@@ -14,9 +15,7 @@ const BlogDetailPage = () => {
     }
     if (currBlog != undefined) {
         return (
-            <p>
-                {currBlog.title}
-            </p>
+            <Detail currBlog={currBlog} />
         );
     }
     else

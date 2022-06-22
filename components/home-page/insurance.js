@@ -2,7 +2,7 @@ import styles from './insurance.module.css';
 import {allInsurances} from "../../data/insurance";
 import InsuranceItem from "./insurance-item";
 import Image from "next/image";
-import imgPath from '../../public/images/service-bg-mobile.webp';
+import imgPath from '../../public/images/service-bg-mobile.jpg';
 
 const Insurance = () => {
 

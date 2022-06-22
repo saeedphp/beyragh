@@ -1,7 +1,7 @@
 import {Fragment} from "react";
 import styles from './about-us.module.css';
 import Image from "next/image";
-import img1 from '../../public/images/about.webp';
+import img1 from '../../public/images/about.jpg';
 import Card from "../ui/card";
 
 const AboutUs = () => {
