@@ -1,18 +1,18 @@
 import styles from './login.module.css';
-import Search from "../../icons/search";
-import User from "../../icons/user";
+import UserLight from "../../icons/user-light";
+import SearchLight from "../../icons/search-light";
 
 const Login = () => {
     return (
         <div className={styles.login}>
             <div className={styles.search}>
-                <Search />
+                <SearchLight />
             </div>
             <div className={styles.btn}>
                 <span>
                     ورود و ثبت نام
                 </span>
-                <User />
+                <UserLight />
             </div>
         </div>
     );

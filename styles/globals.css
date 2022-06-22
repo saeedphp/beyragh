@@ -72,6 +72,11 @@ header{
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
 }
 
+header.light_header{
+  background: #EFEFEF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+}
+
 footer{
   background: linear-gradient(269.54deg, #088F4A -10.81%, #48C32A 157.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);

@@ -5,7 +5,7 @@ import Footer from "./footer/footer";
 const LightLayout = (props) => {
     return (
         <Fragment>
-            <header>
+            <header className="light_header">
                 <Header />
             </header>
             <main>
