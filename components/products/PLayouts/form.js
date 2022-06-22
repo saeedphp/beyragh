@@ -5,6 +5,8 @@ import Input from "../../form/input";
 import Select from "../../form/select";
 import File from "../../form/file";
 import TextBox from "../../form/textBox";
+import Link from "next/link";
+import FormMap from "../../form/map";
 
 const SubmitProclamation = ({
   choosedCategory,
@@ -55,6 +57,7 @@ const SubmitProclamation = ({
         <Input title="شماره تماس" />
         <Select title="استان - شهر" />
         <Select title="محدوده آگهی" />
+        {/* <FormMap /> */}
         <File
           title="آپلود عکس آگهی"
           onChange={(image) =>
@@ -83,7 +86,7 @@ const SubmitProclamation = ({
         </button>
 
         <div className="w-full flex justify-center">
-          <button className="text-red49 my-3 ">انصراف</button>
+          <Link href='/' className="text-red49 my-3 ">انصراف</Link>
         </div>
       </form>
     </div>
