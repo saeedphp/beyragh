@@ -6,8 +6,6 @@ import Mourning from "../components/home-page/mourning";
 import Shop from "../components/home-page/shop";
 import Charity from "../components/home-page/charity";
 import Blog from "../components/home-page/blog";
-import { connect } from "react-redux";
-
 
 const HomePage = ({testRedux}) => {
   return (
@@ -22,10 +20,6 @@ const HomePage = ({testRedux}) => {
       </Fragment>
   )
 };
-const mapStateToProps = state => ({
 
-});
-const mapDispatchToProps = {
-  // testRedux: publicApi.testRedux
-}
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+
+export default (HomePage);

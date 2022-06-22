@@ -49,8 +49,8 @@ class DataManager {
     
     switch (response.status) {
       case 200:
-        dispatch({ type: url, payload: response.data, params });
-        console.log('STATUS 200 RES:', response.data)
+        dispatch({ type: url, payload: response.data.results, params });
+        console.log('STATUS 200 RES:', response.data.results)
         return response.data;
       case 401:
         if (await this.refresh()) {

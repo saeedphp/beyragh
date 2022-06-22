@@ -9,7 +9,7 @@ const initialState = {
 export default function adsReducer(state = initialState, action) {
   let { type, payload } = action;
   switch (type) {
-    case "ads/ad-categories":
+    case "ads/ad-categories/":
       return {
         ...state,
         categories: payload,
@@ -18,11 +18,17 @@ export default function adsReducer(state = initialState, action) {
       if (!payload) {
         return state;
       } else {
-        // return {
-        //   ...state,
-        //   categories: payload.adsReducer.categories,
-        // };
-        return state
+        let parentCats = payload.adsReducer.categories.filter(item => item.related_ad_category == null);
+        let structuredCats = [...parentCats.map((category => (
+          {
+            ...category,
+            subCategories: payload.adsReducer.categories.filter(itm => itm.related_ad_category == category.id)
+          }
+        )))];
+        return {
+          ...state,
+          categories: structuredCats,
+        };
       }
 
     case "CHOOSE_CATEGORY":

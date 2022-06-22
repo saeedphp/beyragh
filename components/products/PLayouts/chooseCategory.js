@@ -33,7 +33,7 @@ const ChooseCategory = ({ categories, nextStep, chooseCategory, fetchCategories 
                 {item.title}
               </p>
             </div>
-            {item.relatedCats?.length > 0 && (
+            {item.subCategories?.length > 0 && (
               <p
                 className={`${
                   item.id == showSubCats && "rotate-180"
@@ -51,7 +51,7 @@ const ChooseCategory = ({ categories, nextStep, chooseCategory, fetchCategories 
 
           {showSubCats == item.id && (
             <div className="flex w-full flex-col py-3 px-10">
-              {item.relatedCats.map((relatedCat, idx) => (
+              {item.subCategories.map((relatedCat, idx) => (
                 <p className="text-sm my-2 cursor-pointer text-secondaryBlack" key={`ADS_CAT__${relatedCat.id}__${item.id}`} onClick={() => {
                     nextStep();
                     chooseCategory(relatedCat.id, item.id);
