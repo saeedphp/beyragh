@@ -9,4 +9,5 @@ const InvestmentPage = () => {
     )
 };
 
+InvestmentPage.layout = "L2"
 export default InvestmentPage;

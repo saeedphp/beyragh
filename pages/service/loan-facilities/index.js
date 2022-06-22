@@ -9,4 +9,5 @@ const LoadFacilitiesPage = () => {
     )
 };
 
+LoadFacilitiesPage.layout = "L2"
 export default LoadFacilitiesPage;

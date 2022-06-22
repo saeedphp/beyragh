@@ -6,4 +6,5 @@ const AboutUsPage = () => {
     )
 };
 
+AboutUsPage.layout = "L1"
 export default AboutUsPage

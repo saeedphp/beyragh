@@ -9,4 +9,5 @@ const EntrepreneurPage = () => {
     )
 };
 
+EntrepreneurPage.layout = "L2"
 export default EntrepreneurPage;

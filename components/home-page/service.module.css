@@ -6,10 +6,11 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .service a{
-    width: 180px;
+    width: 160px;
     transition: all .4s ease-in-out;
 }
 

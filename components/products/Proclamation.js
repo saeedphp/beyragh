@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 
 const Proclamation = ({fetchCats}) => {
     
-    const [steps, setSteps] = useState(2);
+    const [steps, setSteps] = useState(0);
     const layouts = [
         <ChooseCategory nextStep={() => setSteps(steps + 1)} key='CHOOSE_CATEGORY_LAYOUT'/>,
         <SubmitProclamation lastStep={() => setSteps(steps - 1)} key="PROCLAMATION_FORM_LAYOUT"/>,

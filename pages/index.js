@@ -7,7 +7,7 @@ import Shop from "../components/home-page/shop";
 import Charity from "../components/home-page/charity";
 import Blog from "../components/home-page/blog";
 
-const HomePage = ({testRedux}) => {
+const HomePage = () => {
   return (
       <Fragment>
           <Slider />
@@ -21,5 +21,5 @@ const HomePage = ({testRedux}) => {
   )
 };
 
-
-export default (HomePage);
+HomePage.layout = "L1";
+export default HomePage

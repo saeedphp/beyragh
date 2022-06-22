@@ -6,4 +6,5 @@ const ContactPage = () => {
     )
 };
 
+ContactPage.layout = "L1"
 export default ContactPage;
