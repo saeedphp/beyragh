@@ -49,8 +49,8 @@ class DataManager {
     
     switch (response.status) {
       case 200:
-        dispatch({ type: url, payload: response.data.results, params });
-        console.log('STATUS 200 RES:', response.data.results)
+        dispatch({ type: url, payload: response.data, params });
+        console.log('STATUS 200 RES:', response.data)
         return response.data;
       case 401:
         if (await this.refresh()) {
@@ -73,7 +73,7 @@ class DataManager {
     let refresh = localStorage.getItem("refresh");
     if (!refresh) window.location.href = "/";
     let login = await this.login(
-      "user/login",
+      "token/verify",
       {},
       { headers: { Authorization: `Bearer ${refresh}` } }
     );
@@ -82,13 +82,16 @@ class DataManager {
   login = async (url , params , { dispatch } ) =>
     this.post(url, params, {
       dispatch: (obj ) => {
-        let login = obj.data;
-        if (!login || !login.refreshToken) return false;
-        localStorage.setItem("refresh", login.refreshToken);
-        localStorage.setItem("access", login.accessToken);
-        delete login.refreshToken;
-        delete login.accessToken;
-        localStorage.setItem("userData", JSON.stringify(login.profile));
+        let login = obj.payload;
+        if (!login || !login.refresh){
+          console.log('login',login)
+          return false
+        };
+        localStorage.setItem("refresh", login.refresh);
+        localStorage.setItem("access", login.access);
+        delete login.refresh;
+        delete login.access;
+        localStorage.setItem("USER_DATA", JSON.stringify(login.profile));
         dispatch(obj);
       },
     });

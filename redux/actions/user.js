@@ -3,7 +3,10 @@ import _dataManager from "../dataManager";
 const userActions = {
     loginModalControler: (data) => async dispatch => {
             dispatch({type: 'CONTROL_MODAL', payload: data});
-    }
+    },
+    login: (data) => async dispatch => {
+        await _dataManager.login('token/', data, {dispatch});
+    },
 };
 
 export default userActions;

@@ -15,6 +15,14 @@ const adsActions = {
       },
     });
   },
+  checkUserStatus: () => async dispatch => {
+    let access = localStorage.getItem('access');
+    if(access) {
+      dispatch({type: 'SET_USER_STATUS', payload: true});
+    }else {
+      dispatch({type: 'SET_USER_STATUS', payload: false});
+    }
+  },
 };
 
 export default adsActions;
