@@ -1,0 +1,223 @@
+#payment {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.5rem clamp(1rem, 5vw, 5rem);
+    box-sizing: border-box;
+}
+
+#payment .left,
+#payment .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem clamp(.8rem, 4vw, 4rem);
+    margin: clamp(.5rem, 2vw, 2rem);
+}
+
+#payment .left .form,
+#payment .right .form {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#payment .right .form p {
+    font-size: clamp(.7rem, 1.1vw, 1.1rem) !important;
+}
+
+#payment .right .form div div {
+    max-height: 2.5rem;
+    border-radius: .3rem;
+}
+
+#payment .right .form h4 {
+    color: #414042;
+    font-size: clamp(.8rem, 1.3vw, 1.3rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+#payment .right .form .boxinput {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#payment .right .form .boxinput input {
+    padding: .4rem;
+    border: 1px solid #c4c4c4;
+    border-radius: .3rem;
+    border-right: 4px solid #FE4A49;
+}
+
+#payment .left {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: .8rem;
+    padding: 1rem clamp(.8rem, 2vw, 2rem);
+}
+
+#payment .left .form h4 {
+    color: #414042;
+    font-size: clamp(.8rem, 1.3vw, 1.3rem);
+    font-weight: 700;
+}
+
+#payment .left span {
+    margin: 2rem 0 1rem 0;
+    font-size: clamp(.7rem, .9vw, .95rem);
+    color: #414042;
+}
+
+#payment .cartlist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: clamp(.4rem, 1.3vw, 1.3rem) clamp(.5rem, 2vw, 2rem);
+    border-radius: .5rem;
+    background: rgba(229, 229, 229, 0.25);
+    border: 1px solid #c4c4c4;
+}
+
+#payment .cartlist div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#payment .cartlist div:nth-child(2) {
+    border-top: 2px solid #c1c1c1;
+}
+
+#payment .cartlist span {
+    color: #414042;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    font-weight: 700;
+    margin: .5rem;
+}
+#payment .cartlist h6 {
+    color: #414042;
+    font-size: clamp(.6rem, .8vw, .8rem);
+}
+
+#payment .cartlist h5 {
+    color: #414042;
+    font-size: clamp(.6rem, .9vw, .9rem);
+}
+
+#payment .bill {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: clamp(.5rem, 1vw, 1rem);
+    border-radius: .5rem;
+}
+
+#payment .bill div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(.5rem, .8vw, .8rem) 0;
+}
+
+#payment .bill div:nth-child(2) h5 {
+    color: #FE4A49;
+}
+
+#payment .bill span {
+    color: #414042;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    font-weight: 700;
+}
+#payment .bill h6 {
+    color: #414042;
+    font-size: clamp(.6rem, .9vw, .9rem);
+}
+
+#payment .bill h5 {
+    color: #414042;
+    font-size: clamp(.6rem, .9vw, .9rem);
+}
+
+#payment .payport {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(229, 229, 229, 0.25);
+    border: 1px solid #c4c4c4;
+    border-radius: .5rem;
+    padding: clamp(.5rem, 1vw, 1rem);
+}
+
+#payment .payport .listport {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+#payment .payport .listport span span {
+    display: none !important;
+}
+
+#payment .payport .listport .port {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#payment .payport h5 {
+    color: #414042;
+    font-size: clamp(.6rem, .9vw, .9rem);
+}
+
+#payment .paybtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#payment .paybtn span {
+    width: 9rem !important;
+}
+
+#payment .payport .listport .port input {
+    margin-top: .4rem;
+}
+
+#payment .form .paybtn button {
+    max-width: 15rem;
+    padding: .6rem 1rem;
+    background: #009A75;
+    margin-top: 2rem;
+}
+
+@media (max-width: 630px) {
+    #payment {
+        flex-direction: column;
+    }
+    #payment .left,
+    #payment .right {
+        width: 100%;
+    }
+}

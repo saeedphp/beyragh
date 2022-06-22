@@ -2,7 +2,7 @@ import {Fragment} from "react";
 import styles from "./item.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import imgPath from "../../../public/images/services/entertainment/1.webp";
+import imgPath from "../../../public/images/services/entertainment/1.jpg";
 import pool from "../../../public/images/services/entertainment/pool.png";
 import Location from "../../icons/location";
 import Button from "../../ui/button";

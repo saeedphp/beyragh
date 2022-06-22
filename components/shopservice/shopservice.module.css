@@ -1,0 +1,207 @@
+#shopservice {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: clamp(1rem, 2vw, 2rem) clamp(.9rem, 4vw, 4rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#shopservice .sidebarbox {
+    width: 25%;
+    padding: 0;
+}
+
+#shopservice .main {
+    width: 70%;
+}
+
+#shopservice .main .filters {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+#shopservice .main .filters .itemfilter {
+    border: 1px solid #c4c4c4;
+    border-radius: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    width: 30%;
+}
+
+#shopservice .main .filters .itemfilter svg {
+    fill: #4f4f4f !important;
+    stroke: #4f4f4f;
+}
+
+#shopservice .main .filters .itemfilter span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shopservice .main .filters .itemfilter select,
+#shopservice .main .filters .itemfilter input {
+    border: none;
+    outline: none;
+    color: #4F4F4F;
+    width: 100%;
+    max-width: 20rem;
+    font-size: clamp(.6rem, 1vw, .9rem);
+}
+
+#shopservice .main .top {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#shopservice .main .top .search {
+    background: rgba(196, 196, 196, 0.38);
+    opacity: 0.6;
+    border-radius: 5.04348px;
+    width: clamp(60%, 68vw, 77%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 clamp(1rem, 2vw, 2rem);
+}
+
+#shopservice .main .top .search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: -webkit-fill-available;
+}
+
+#shopservice .main .top .search input::placeholder {
+    color: #4F4F4F;
+}
+
+#shopservice .main .top .search span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#shopservice .main .top .search span svg {
+    width: clamp(1rem, 2vw, 1.9rem);
+}
+
+#shopservice .main .top .btn {
+    width: clamp(20%, 30vw, 15%);
+}
+
+#shopservice .main .top .btn .button {
+    background: #FE4A49 !important;
+    justify-content: center;
+    font-size: clamp(.7rem, .8vw, 1rem);
+    padding: .7rem .3rem;
+}
+#shopservice .main .top .btn .button svg {
+    width: clamp(.6rem, 1.5vw, 1.5rem);
+    margin-left: clamp(.2rem, .5vw, .5rem);
+}
+
+#shopservice .body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: clamp(1rem, 2vw, 2rem) 0;
+}
+
+#shopservice .body .item {
+    /* width: 47%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: .5rem;
+    box-sizing: border-box;
+    padding: .5rem;
+}
+
+#shopservice .body .item .boxdata {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+#shopservice .body .item .boxdata h2 {
+    font-size: clamp(.6rem, 1vw, .9rem);
+    color: #4f4f4f;
+}
+
+#shopservice .body .item .boxdata span {
+    font-size: clamp(.5rem, 1vw, .85rem);
+    color: #4f4f4f;
+}
+
+#shopservice .body .item .boxdata h5 {
+    font-size: clamp(.5rem, 1vw, .85rem);
+    color: #FE4A49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem 0;
+    font-weight: 400;
+}
+
+#shopservice .body .boximg span span {
+    display: none !important;
+}
+
+#shopservice .body .boximg img {
+    width: clamp(8rem, 11vw, 11rem) !important;
+}
+
+.sidebar ul::-webkit-scrollbar-thumb {
+    background-color: #FE4A49 !important;
+}
+
+.sidebar h5 {
+    background: #FE4A49;
+    color: #fff;
+}
+
+.sidebar:first-child .city {
+    order: 2;
+    background: #071D4C !important;
+}
+
+@media (max-width: 900px) {
+    #shopservice .sidebarbox {
+        display: none;
+    }
+
+    #shopservice .main {
+        width: 100%;
+    }
+    #shopservice .body {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #shopservice .main .filters {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 700px) {
+    #shopservice .body {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

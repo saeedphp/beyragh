@@ -17,7 +17,7 @@ const CulturalEntertainment = () => {
 
     return (
         <Fragment>
-            <PageHeader title=" امکانات فرهنگی تفریحی" pageTitle="خدمات" pageLink="/" image="sport.webp" />
+            <PageHeader title=" امکانات فرهنگی تفریحی" pageTitle="خدمات" pageLink="/" image="sport.jpg" />
             <section className={styles.entertainment}>
                <div className={styles.search}>
                    <input type="text" placeholder="جستجو مکان مورد نطر ..." value={inputText} onChange={onChange} />

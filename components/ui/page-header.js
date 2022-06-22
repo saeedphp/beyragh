@@ -3,7 +3,7 @@ import styles from './page-header.module.css';
 import Link from "next/link";
 import BreadcrumbArrow from "../icons/breadcrumb-arrow";
 import Home from "../icons/home";
-import bg1 from '../../public/images/page-header/medical.webp';
+import bg1 from '../../public/images/page-header/medical.jpg';
 
 const PageHeader = ({title, pageTitle, pageLink, image}) => {
 

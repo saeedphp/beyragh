@@ -1,0 +1,403 @@
+#cart {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem clamp(.8rem, 1vw, 1rem);
+}
+
+#cart  button:hover {
+    cursor: pointer;
+}
+
+#cart .list {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    padding: clamp(.5rem, 2vw, 2rem);
+    border-radius: .5rem;
+}
+
+#cart .list h5 {
+    font-size: clamp(.9rem, 1vw, 1.2rem);
+    margin: 0;
+    margin-top: clamp(.8rem, 1vw, 1rem);
+    color: #4f4f4f;
+}
+
+#cart .list .items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .7rem;
+    padding: .7rem clamp(.6rem, 4vw, 5rem);
+    background: rgba(229, 229, 229, 0.55);
+    border: 1px solid #999494;
+    margin: 2rem 0;
+}
+#cart .list .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .7rem;
+    padding: .7rem clamp(3rem, 5vw, 5rem);
+    background: #FE4A49;
+    color: #fff;
+}
+
+#cart .list .title h6 {
+    margin: 0;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#cart .list .title h6:first-child,
+#cart .list .items .item:first-child {
+    width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#cart .list .items .item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart .list .items .item h4 {
+    font-size: clamp(.75rem, 1vw, 1rem);
+    color: #FE4A49;
+}
+#cart .list .items .item h6 {
+    display: none;
+    color: #414042;
+}
+
+#cart .list .items .item:nth-child(1) button {
+    font-size: clamp(1.5rem, 1.5vw, 1.5rem);
+    color: #FE4A49;
+    background: transparent;
+    border: none;
+}
+
+#cart .list .items .item:nth-child(3) .counter {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    border-radius: .4rem;
+}
+
+#cart .list .items .item:nth-child(3) .counter button {
+    background: transparent;
+    border: none;
+}
+
+#cart .list .items .item:nth-child(3) .counter button:hover {
+    cursor: pointer;
+    background: #c4c4c450;
+}
+
+#cart .list .items .item:nth-child(3) .counter span {
+    text-align: center;
+}
+
+#cart .list .items .product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart .list .items span span {
+    display: none !important;
+}
+
+#cart .list .items .images {
+    width: clamp(7rem, 9vw, 9rem);
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+#cart .list .items span,
+#cart .list .items img {
+    width: clamp(7rem, 9vw, 9rem) !important;
+    object-fit: fill !important;
+    height: 100% !important;
+}
+
+#cart .list .items h2 {
+    margin: 0 .4rem 0 0;
+    font-size: clamp(.7rem, .8vw, .8rem);
+    color: #414042;
+}
+
+#cart .list .items .additem {
+    width: clamp(1.5rem, 3vw, 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cart .list .items .additem span {
+    width: clamp(1.5rem, 3vw, 3rem);
+    text-align: center;
+}
+
+#cart .list .footerlist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cart .list .footerlist .off {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cart .list .footerlist .off span {
+    color: #414042;
+    font-size: clamp(.8rem, 1vw, 1rem);
+}
+
+#cart .list .footerlist .off .boxinput {
+    border: 1px solid #c4c4c4;
+    border-right: 5px solid #FE4A49;
+    border-radius: .4rem;
+    padding: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cart .list .footerlist .off .boxinput input {
+    border: none;
+    width: clamp(10rem, 15vw, 15rem);
+}
+
+#cart .list .footerlist .off .boxinput button {
+    background: #FE4A49;
+    max-width: 8rem;
+    font-size: clamp(.6rem, .1vw, 1.1rem);
+    padding: .7rem clamp(.7rem, 1vw, 1rem);
+    border-radius: .3rem;
+}
+
+#cart .list .footerlist .update {
+    width: clamp(9rem, 13vw, 13rem);
+    background: #FE4A49;
+    color: #fff;
+    padding: clamp(.7rem, 1vw, 1rem) clamp(.7rem, 1vw, 1rem);
+    font-size: clamp(.7rem, 1vw, .9rem);
+}
+
+#cart .bill {
+    margin-top: 3rem;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    padding: clamp(.8rem, 2vw, 2rem);
+    border-radius: .5rem;
+}
+
+#cart .bill div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+#cart .bill div:nth-child(3) {
+    border-top: 2px solid #c1c1c1;
+}
+
+#cart .bill span {
+    color: #414042;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    font-weight: 700;
+}
+#cart .bill h6 {
+    color: #414042;
+    font-size: clamp(.8rem, 1vw, 1rem);
+}
+
+#cart .bill h5 {
+    color: #FE4A49;
+    font-size: clamp(.8rem, 1vw, 1rem);
+}
+
+#cart .bill button {
+    width: clamp(8rem, 10vw, 10rem);
+    font-size: clamp(.7rem, .9vw, .9rem);
+    padding: clamp(.6rem, 1vw, 1rem);
+    background: #009A75;
+}
+
+@media (max-width: 700px) {
+    #cart .bill,
+    #cart .list {
+        width: 98%;
+    }
+    #cart .list .items .product,
+    #cart .list .items {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #cart .list .items .item:first-child {
+        width: 100%;
+    }
+    #cart .list .items .item {
+        justify-content: space-around;
+    }
+    #cart .list .items .item h6 {
+        display: block;
+    }
+    #cart .list .title {
+        display: none;
+    }
+    #cart .list .footerlist .off,
+    #cart .list .footerlist {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #cart .list .footerlist .off .boxinput {
+        width: 100%;
+    }
+    #cart .list .footerlist .off {
+        order: 2;
+        align-items: flex-start;
+    }
+    #cart .list .footerlist .update {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* 
+#cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cart .list {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cart .list table {
+    width: 100%;
+    border: none !important;
+    outline: none;
+    border-spacing: 0;
+    border-radius: 1rem;
+}
+
+#cart .list table tr th:nth-child(2) {
+    text-align: start;
+}
+
+#cart .list table tr th:first-child {
+    border-radius: 0 .3rem .3rem 0;
+}
+
+#cart .list table tr th:last-child {
+    border-radius: .3rem 0 0 .3rem;
+}
+
+#cart .list table tr th,
+#cart .list table tr td {
+    max-width: 12rem;
+    padding: .8rem !important;
+}
+
+#cart .list table tr td {
+    background: #c4c4c4;
+    margin: 1rem !important;
+}
+
+#cart .list table tr th {
+    background: #FE4A49;
+    color: #fff;
+    text-align: center;
+}
+
+#cart .list h4 {
+    text-align: center;
+}
+
+#cart .list h6 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+#cart .list .product {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#cart .list span span {
+    display: none !important;
+}
+
+#cart .list .images {
+    width: 9rem;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+#cart .list span,
+#cart .list img {
+    width: 9rem !important;
+    object-fit: fill !important;
+    height: 100% !important;
+}
+
+#cart .list h2 {
+    margin: 0;
+    font-size: .9rem;
+}
+
+#cart .list .additem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cart .list .additem span {
+    width: 3rem;
+    text-align: center;
+} */

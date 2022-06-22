@@ -1,6 +1,6 @@
 import styles from './footer-top.module.css';
 import Image from "next/image";
-import logoImg from '../../../public/images/footer-logo.webp';
+import logoImg from '../../../public/images/footer-logo.jpg';
 
 const FooterTop = () => {
     return (

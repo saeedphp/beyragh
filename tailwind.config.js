@@ -13,7 +13,7 @@ module.exports = {
        secondaryBlack: '#212121',
        gray4F: '#4f4f4f',
        pinkF6: '#FDF9F6',
-       green4A: '#088F4A',
+       green4A : '#088F4A'
       },
     },
     screens: {

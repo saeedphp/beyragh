@@ -1,0 +1,94 @@
+#silderorigin {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#silderorigin .imgorigin {
+    width: 100%;
+    position: relative;
+}
+
+#silderorigin .imgorigin span {
+    width: 100% !important;
+}
+
+#silderorigin .imgorigin .right svg,
+#silderorigin .imgorigin .left svg {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+#silderorigin .imgorigin .right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: #fff;
+    border: none;
+    padding: .4rem .7rem;
+    border-radius: .4rem;
+    background: rgba(196, 196, 196, 0.72);
+}
+
+#silderorigin .imgorigin .left {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    color: #fff;
+    border: none;
+    padding: .4rem .7rem;
+    border-radius: .4rem;
+    background: rgba(196, 196, 196, 0.72);
+}
+#silderorigin .imgorigin .right:hover,
+#silderorigin .imgorigin .left:hover {
+    cursor: pointer;
+}
+
+#silderorigin .imgorigin .right,
+#silderorigin .imgorigin .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#silderorigin .box_miniimg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: .5rem;
+}
+
+#silderorigin .box_miniimg .miniimg {
+    width: clamp(6rem, 8vw, 8rem);
+    height: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: .4rem;
+    overflow: hidden;
+    margin: 0.3rem .5rem !important;
+}
+
+#silderorigin .box_miniimg .miniimg img {
+    width: clamp(6rem, 8vw, 8rem) !important;
+    height: clamp(3rem, 5vw, 5rem) !important;
+    object-fit: fill !important;
+}
+
+#silderorigin .box_miniimg .miniimg:hover {
+    cursor: pointer;
+}
+
+#silderorigin .box_miniimg img {
+    width: 15rem !important;
+    height: 5rem !important;
+    object-fit: fill !important;
+}
+
+#silderorigin .imgorigin span span,
+#silderorigin .box_miniimg span span {
+    display: none !important;
+}

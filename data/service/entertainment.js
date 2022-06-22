@@ -1,7 +1,7 @@
 const DUMMY_DATA = [
     {
         id: "e1",
-        image: 'images/services/entertainment/1.webp',
+        image: 'images/services/entertainment/1.jpg',
         icon: 'images/services/entertainment/pool.png',
         title: 'استخر شبانه روزی 4 فصل هودین و هورام',
         description: 'استخر نارسیس به عنوان یکی از استخرهای شناخته شده شرق تهران  درمنطقه تهرانپارس می‌باشد که شیک بودن و تمیز بودن آن جز خصوصیات بارز آن می‌باشد استخر نارسیس به عنوان یکی از استخرهای شناخته شده شرق تهران  درمنطقه تهرانپارس می‌باشد که شیک بودن و تمیز بودن آن جز خصوصیات بارز آن می‌باشد ....',
@@ -14,15 +14,15 @@ const DUMMY_DATA = [
         gallery: [
             {
                 id: 'g1',
-                src: '/images/services/entertainment/1.webp',
+                src: '/images/services/entertainment/1.jpg',
             },
             {
                 id: 'g2',
-                src: '/images/services/entertainment/2.webp',
+                src: '/images/services/entertainment/2.jpg',
             },
             {
                 id: 'g3',
-                src: '/images/services/entertainment/1.webp',
+                src: '/images/services/entertainment/1.jpg',
             },
         ],
         specs: [
@@ -50,7 +50,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e2',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -62,7 +62,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e3',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -74,7 +74,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e4',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -86,7 +86,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e5',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -98,7 +98,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e6',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -110,7 +110,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e7',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -122,7 +122,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e8',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -134,7 +134,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e9',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -146,7 +146,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e10',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -158,7 +158,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e11',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -170,7 +170,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e12',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -182,7 +182,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e13',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -194,7 +194,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e14',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',
@@ -206,7 +206,7 @@ const DUMMY_DATA = [
     },
     {
         id: 'e15',
-        image: 'images/services/entertainment/2.webp',
+        image: 'images/services/entertainment/2.jpg',
         icon: 'images/services/entertainment/gym.png',
         title: 'باشگاه بای فیتنس',
         description: 'باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط، باشگاه ورزشی بای فیتنس با محیط مناسب و بهداشتی و همراهی مربیان و کادر حرفه ای، پذیرای ورزش دوستان عزیز است. ورزش علاوه بر تزریق شادابی و نشاط،...',

@@ -2,7 +2,7 @@ import {Fragment} from "react";
 import styles from './shop.module.css';
 import GreenBtn from "../ui/green-btn";
 import Image from "next/image";
-import imgPath from '../../public/images/laptop.webp';
+import imgPath from '../../public/images/laptop.jpg';
 
 const Shop = () => {
     return (
