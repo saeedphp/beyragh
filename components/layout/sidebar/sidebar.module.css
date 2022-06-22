@@ -15,10 +15,13 @@
     padding: .5rem 1rem;
     margin: 0;
     font-size: .9rem;
+    display: flex;
 }
 #sidebar h4 {
     color: #4f4f4f;
     font-size: clamp(.5rem, 1vw, .9rem);
+    display: flex;
+    margin: 1rem 0 .5rem 0;
 }
 
 /* #sidebar h5 path {

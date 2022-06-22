@@ -1,4 +1,4 @@
-#doctors {
+#legal {
     position: relative;
     width: 100%;
     height: auto;
@@ -8,23 +8,23 @@
     align-items: flex-start;
 }
 
-#doctors .sidebarbox {
+#legal .sidebarbox {
     width: 25%;
     padding: 0;
 }
 
-#doctors .main {
+#legal .main {
     width: 70%;
 }
 
-#doctors .main .top {
+#legal .main .top {
     width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-#doctors .main .top .search {
+#legal .main .top .search {
     background: rgba(196, 196, 196, 0.38);
     opacity: 0.6;
     border-radius: 5.04348px;
@@ -34,39 +34,39 @@
     padding: clamp(.4rem, .7vw, .7rem) clamp(.6rem, 2vw, 2rem);
 }
 
-#doctors .main .top .search input {
+#legal .main .top .search input {
     background: transparent;
     border: none;
     outline: none;
     width: -webkit-fill-available;
 }
 
-#doctors .main .top .search input::placeholder {
+#legal .main .top .search input::placeholder {
     color: #4F4F4F;
     font-size: clamp(.6rem, 1vw, 1rem);
 }
 
-#doctors .main .top .search span {
+#legal .main .top .search span {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-#doctors .main .top .search span svg {
+#legal .main .top .search span svg {
     width: clamp(1rem, 1.8vw, 1.8rem);
     height: clamp(1rem, 1.8vw, 1.8rem);
 }
 
-#doctors .main .top .btn {
+#legal .main .top .btn {
     width: 30%;
 }
 
-#doctors .main .top .btn .button {
-    background: #00A4ED !important;
+#legal .main .top .btn .button {
+    background: #071D4C !important;
     justify-content: space-evenly;
     font-size: clamp(.5rem, .8vw, .8rem);
     padding: clamp(.5rem, .7vw, .7rem);
 }
-#doctors .main .top .btn .button svg {
+#legal .main .top .btn .button svg {
     width: clamp(.7rem, 1.5vw .5rem);
 }
 
@@ -108,7 +108,7 @@
 .info .person > span {
     width: clamp(4rem, 5vw, 5rem) !important;
     border-radius: 50%;
-    background: linear-gradient(27deg, rgba(176,231,218,1) 0%, rgba(0,164,237,1) 100%) border-box !important;
+    background: linear-gradient(27deg, rgba(46,100,165,1) 0%, rgba(7,29,76,1) 100%) border-box !important;
     border: clamp(.2rem, .4vw, .4rem) solid transparent !important;
     padding: 0 !important;
     overflow: hidden !important;
@@ -119,8 +119,8 @@
 }
 
 .info button {
-    color: #0095D9;
-    background: #3ec2ff6e;
+    color: #071D4C;
+    background: #9EA6B9;
     font-size: clamp(.6rem, .9vw, .9rem);
     font-family: IRANYekan !important;
     padding: .9rem clamp(.5rem, 1.3vw, 1.3rem) .6rem;
@@ -166,20 +166,23 @@
 
 @media (max-width: 800px) {
     
-    #doctors .sidebarbox {
+    #legal .sidebarbox {
         display: none;
     }
 
-    #doctors .main {
+    #legal .main {
         width: 100%;
     }
+    /* #legal .main .top .search {
+        width: 100%;
+    } */
 
 }
 .sidebar ul::-webkit-scrollbar-thumb {
-    background-color: #9CDFFF !important;
+    background-color: #283B63 !important;
 }
 
 .sidebar h5 {
-    background: #9ce0ff8f;
-    color: #00A4ED;
+    background: #C5C9D5;
+    color: #071D4C;
 }

@@ -7,63 +7,72 @@ import Image from "next/image";
 import img from '../../../public/images/services/medical/doctors/1.jpg';
 import AddressList from "../../icons/address-list";
 import PageHeader from "../../ui/page-header";
+import Sidebar from "../../layout/sidebar/sidebar";
+import { FaStethoscope } from 'react-icons/fa';
+import { Doctors, Takhasos } from "../../../data/medical";
 
 const Medical = () => {
+    const AllDoctors = Doctors();
     return (
       <Fragment>
-          <PageHeader title=" امکانات فرهنگی تفریحی" pageTitle="خدمات" pageLink="/" />
-          <section className={styles.doctors}>
-              <div className={styles.sidebar}>
-                  sidebar
-              </div>
-              <div className={styles.main}>
+      <PageHeader title=" امکانات فرهنگی تفریحی" pageTitle="خدمات" pageLink="/" />
+      <section id={styles.doctors}>
+          <div className={styles.sidebarbox}>
+            <Sidebar className={styles.sidebar} data={Takhasos} title={"تخصص"} icon={<FaStethoscope />} 
+                input={true} Bcolor={"#9CDFFF"} Color={"#00B0FF"}
+            />
+          </div>
+          <div className={styles.main}>
 
-                  <div className={styles.top}>
-                      <div className={styles.search}>
-                          <input type="text" placeholder="نام پزشک یا تخصص مورد نظر را جستجو کنید" />
-                          <span>
-                              <SearchFilter />
-                          </span>
-                      </div>
-                      <div className={styles.btn}>
-                          <Button className={styles.button}>
-                              <MedicalSignup />
-                              ثبت نام پزشکان
-                          </Button>
-                      </div>
+              <div className={styles.top}>
+                  <div className={styles.search}>
+                      <input type="text" placeholder="نام پزشک یا تخصص مورد نظر را جستجو کنید" />
+                      <span>
+                          <SearchFilter />
+                      </span>
                   </div>
-
-                  <ul className={styles.items}>
-                      <li className={styles.list}>
-                          <div className={styles.wrapper}>
-                              <div className={styles.info}>
-                                  <div className={styles.person}>
-                                      <Image src={img} alt="image" layout={"fill"} />
-                                      <div className={styles.data}>
-                                          <h2>
-                                              دکتر محمدرضا عسگریان
-                                          </h2>
-                                          <h3>
-                                              متخصص مغز و اعصاب
-                                          </h3>
-                                      </div>
-                                  </div>
-                                  <div>
-                                      <Button>
-                                          شماره تماس 021-12345678
-                                      </Button>
-                                  </div>
-                              </div>
-                              <div className={styles.address}>
-                                  <AddressList />
-                                  address
-                              </div>
-                          </div>
-                      </li>
-                  </ul>
-
+                  <div className={styles.btn}>
+                      <Button className={styles.button}>
+                          <MedicalSignup />
+                          ثبت نام پزشکان
+                      </Button>
+                  </div>
               </div>
-          </section>
+
+              <ul className={styles.items}>
+                  {AllDoctors.map((item) => (
+
+                    <li className={styles.list} key={item.id}>
+                        <div className={styles.wrapper}>
+                            <div className={styles.info}>
+                                <div className={styles.person}>
+                                    <Image src={item.profile} alt="image" layout={"fill"} />
+                                    <div className={styles.data}>
+                                        <h2>
+                                            {item.name}
+                                        </h2>
+                                        <h3>
+                                            {item.expertise}
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div>
+                                    <Button>
+                                        شماره تماس {item.tel}
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className={styles.address}>
+                                <AddressList />
+                                {item.address}
+                            </div>
+                        </div>
+                    </li>
+                  ))}
+              </ul>
+
+          </div>
+      </section>
       </Fragment>
     );
 };
