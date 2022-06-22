@@ -12,7 +12,7 @@ const LoginModal = ({loginModalStatus, loginModalControler, isLogin}) => {
         <RegisterModalLayout changeType={() => setType(0)} closeModal={() => loginModalControler(false)}/>
     ]
     return(
-        loginModalStatus && isLogin ? (
+        loginModalStatus && !isLogin ? (
            <div className="w-full min-h-screen top-0 fixed flex items-center justify-center z-10 bg-opac">
             {typeLayout[type]}
            </div>
