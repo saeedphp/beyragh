@@ -6,8 +6,10 @@ import { wrapper } from '../redux/store';
 import 'tailwindcss/tailwind.css';
 import LoginModal from '../components/Modals/Login';
 
+
 function MyApp({ Component, pageProps }) {
   return (
+
       <Layout>
        <LoginModal />
         <Component {...pageProps} />

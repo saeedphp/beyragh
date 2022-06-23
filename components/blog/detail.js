@@ -7,10 +7,11 @@ import styles from "./detail.module.css";
 import Input from "../form/input";
 import Button from "../ui/button";
 import Faramouj from "../../public/images/faramouj.jpg";
+import { connect } from "react-redux";
 
-const Detail = ({ currBlog }) => {
+const Detail = ({ currBlog, blogCategories }) => {
     console.log(currBlog)
-
+    const categoryTitle = blogCategories?.find(itm => itm.id == currBlog.related_post_category)?.title;
     return (
         <Fragment>
             <section id={styles.boxdetail}>
@@ -21,11 +22,11 @@ const Detail = ({ currBlog }) => {
                     <div className={styles.date}>
                         <div>
                             <FiCalendar />
-                            <h6>تاریخ انتشار {currBlog.date}</h6>
+                            <h6>تاریخ انتشار {currBlog.created_date.slice(0,10).replace(/-/g,"/")}</h6>
                         </div>
                         <div>
                             <BsCardList />
-                            <h6>دسته بندی: {currBlog.category}</h6>
+                            <h6>دسته بندی: {categoryTitle}</h6>
                         </div>
                     </div>
                     <div className={styles.content}>
@@ -107,5 +108,7 @@ const Detail = ({ currBlog }) => {
         </Fragment>
     );
 };
-
-export default Detail;
+const mapStateToProps = state => ({
+    blogCategories: state.blogReducer.categories,
+})
+export default connect(mapStateToProps)(Detail);

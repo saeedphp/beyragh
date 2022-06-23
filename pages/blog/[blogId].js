@@ -31,6 +31,9 @@ const BlogDetailPage = ({currBlog}) => {
 export const getServerSideProps = wrapper.getServerSideProps(store => async ({ query }) => {
     console.log('store state on the server before dispatch', store.getState());
       await store.dispatch(blogActions.getInfo({id: query.blogId}));
+      if(store.getState().blogReducer?.categories?.length == 0){
+          await store.dispatch(blogActions.getCategories());
+      }
       console.log('store state on the server after dispatch', store.getState());
   
     

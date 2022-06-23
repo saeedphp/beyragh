@@ -3,12 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Date from "../icons/date";
 import BlogArrow from "../icons/blog-arrow";
+import { connect } from "react-redux";
 
 const BlogItem = (props) => {
 
-    const {id, image, title, description, category, date} = props;
+    const {id, image, title, description, category, date, blogCategories} = props;
     const imgPath = `${image}`;
     const link = `/blog/${id}`;
+    const categoryTitle = blogCategories.find(itm => itm.id == category)?.title;
 
     return (
         <div className={styles.items}>
@@ -21,7 +23,7 @@ const BlogItem = (props) => {
             }
             <div className={styles.meta}>
                 <h4 className={styles.category}>
-                    {category}
+                    {categoryTitle}
                 </h4>
                 <time className={styles.time}>
                     <Date />
@@ -48,4 +50,8 @@ const BlogItem = (props) => {
     )
 };
 
-export default BlogItem;
+const mapStateToProps = (state) => ({
+    blogCategories: state.blogReducer.categories,
+})
+
+export default connect(mapStateToProps)(BlogItem);
