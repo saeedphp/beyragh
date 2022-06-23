@@ -7,6 +7,8 @@ import { allCity } from "../../../data/data";
 import { AllShopData } from "../../../data/shopdata";
 import { useState, useEffect } from "react";
 import Button from "../../ui/button";
+import { connect } from "react-redux";
+import {IoIosArrowDown} from 'react-icons/io'
 
 const Sidebar = (props) => {
     const Data = props.data();
@@ -16,6 +18,7 @@ const Sidebar = (props) => {
     // const { checked, label, id } = props.cuisine;
 
     const [showData, setShowData] = useState(null);
+    const [showSubCats, setShowSubCats] = useState(null);
     const ToggleShowData = (id) => {
         if (showData === id) {
             return setShowData(null);
@@ -58,21 +61,50 @@ const Sidebar = (props) => {
                             </div>
                         : null}
                         <ul className={styles.listcity} >
-                            {Data.map((item) => (
-                                <li key={item.id}>
-                                    
-                                    <div className={styles.firstItem}>
-                                        {props.checkBox ? <input type="checkbox" /> : null}{item.icon} 
-                                        <span onClick={() => ToggleShowData(item.id)}>{item.name}</span>
-                                    </div>
-                                    {showData == item.id ?
-                                        <ul className={styles.subitems}>
-                                            {item.products.map((subitem) => (
-                                                <li key={subitem.id}>{subitem.name}</li>
-                                            ))}
-                                        </ul>
-                                    : ""}   
-                                </li>
+                            {props.adCategories?.map((item) => (
+                                <div className="w-full  flex items-center flex-col  py-2 px-3" key={`ADS_MAIN_CAT__${item.id}`}>
+                                <div className="w-full flex items-center justify-between">
+                                  <div className="flex items-center text-primaryBlack text-md">
+                                    {/* <span className={`text-3xl text-red49 ml-2 `}>{item.icon}</span> */}
+                                    <p
+                                    className="cursor-pointer"
+                                      onClick={() => {
+                                        // nextStep();
+                                        // chooseCategory(item.id, null);
+                                      }}
+                                    >
+                                      {item.title}
+                                    </p>
+                                  </div>
+                                  {item.subCategories?.length > 0 && (
+                                    <p
+                                      className={`${
+                                        item.id == showSubCats && "rotate-180"
+                                      } text-xl text-primaryBlack cursor-pointer`}
+                                      onClick={() =>
+                                        showSubCats == item.id
+                                          ? setShowSubCats(null)
+                                          : setShowSubCats(item.id)
+                                      }
+                                    >
+                                      <IoIosArrowDown />
+                                    </p>
+                                  )}
+                                </div>
+                      
+                                {showSubCats == item.id && (
+                                  <div className="flex w-full flex-col py-3 px-10">
+                                    {item.subCategories.map((relatedCat, idx) => (
+                                      <p className="text-sm my-2 cursor-pointer text-secondaryBlack" key={`ADS_CAT__${relatedCat.id}__${item.id}`} onClick={() => {
+                                        //   nextStep();
+                                        //   chooseCategory(relatedCat.id, item.id);
+                                        }}>
+                                        {relatedCat.title}
+                                      </p>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                         </ul>
                     </div>
@@ -95,5 +127,7 @@ const Sidebar = (props) => {
         </Fragment>
     )
 }
-
-export default Sidebar;
+const mapStateToProps = state => ({
+    adCategories: state.adsReducer.categories,
+})
+export default connect(mapStateToProps)(Sidebar);

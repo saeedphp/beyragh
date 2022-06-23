@@ -20,7 +20,9 @@ const ProductProclamationPage = () => {
 
 export const getServerSideProps = wrapper.getServerSideProps(store => async ({ query }) => {
   console.log('store state on the server before dispatch', store.getState());
-    await store.dispatch(adsActions.list());
+    if(store.getState().adsReducer?.categories?.length == 0){
+      await store.dispatch(adsActions.getCategories());
+    }
     console.log('store state on the server after dispatch', store.getState());
 
   
