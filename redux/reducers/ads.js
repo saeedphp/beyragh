@@ -5,6 +5,7 @@ const initialState = {
   choosedCatPId: null,
   categories: [],
   list: [],
+  info: {},
 };
 
 export default function adsReducer(state = initialState, action) {
@@ -20,6 +21,11 @@ export default function adsReducer(state = initialState, action) {
           ...state, 
           list: payload.results,
         }
+        case `ads/ads/${payload?.id}/`:
+          return {
+            ...state,
+            info: payload
+          }
     case HYDRATE:
       if (!payload) {
         return state;
@@ -41,8 +47,10 @@ export default function adsReducer(state = initialState, action) {
 
         case (payload.adsReducer.list.length > 0):
           return state
+          default: return state
 
         }
+        
       }
 
     case "CHOOSE_CATEGORY":

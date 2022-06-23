@@ -9,8 +9,9 @@ import Slider from "./slider";
 import styles from "./detail.module.css";
 import Mac from '../../public/images/shopservice/mac.png'
 import Button from "../ui/button";
+import { connect } from "react-redux";
 
-const Detail = ({ Pid }) => {
+const Detail = ({ Pid, adInfo }) => {
 
     const Products = AllShopData();
     const [data, setData] = useState(
@@ -54,16 +55,16 @@ const Detail = ({ Pid }) => {
                     </div>
                     <div className={styles.description}>
                         <h5>توضیحات</h5>
-                        <p>{data.description}</p>
+                        <p>{adInfo.description}</p>
                     </div>
                 </div>
                 <div className={styles.left}>
                     <div className={styles.boxleft}>
                         <div className={styles.top}>
                             <h2>
-                                {data.title}
+                                {adInfo.title}
                             </h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است</p>
+                            <p>{adInfo.description}</p>
                         </div>
                         <div className={styles.profile}>
                             {data.detail.map((item, i) => (
@@ -94,5 +95,7 @@ const Detail = ({ Pid }) => {
         </Fragment>
     )
 }
-
-export default Detail;
+const mapStateToProps = state => ({
+    adInfo: state.adsReducer.info,
+})
+export default connect(mapStateToProps)(Detail);

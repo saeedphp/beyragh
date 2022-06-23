@@ -7,6 +7,7 @@ const adsActions = {
       await _dataManager.get("ads/ad-categories/", data, { dispatch }),
   getList: 
   (data = {}) => async dispatch => await _dataManager.get('ads/ads/', data, { dispatch }),   
+  getInfo: (data = {}) => async dispatch => await _dataManager.get(`ads/ads/${data?.id}/`, data, {dispatch}),
 
   chooseCategory: (catId, PId) => async (dispatch) => {
     await dispatch({

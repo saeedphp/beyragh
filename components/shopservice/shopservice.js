@@ -13,13 +13,15 @@ import { IoWalletOutline } from 'react-icons/io5';
 import styles from './shopservice.module.css';
 import Pagination from '../layout/Pagination';
 import { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import separate from "../../utils/separate";
 
-const ShopService = () => {
+const ShopService = ({products}) => {
 
-    const Products = AllShopData();
+    // const Products = AllShopData();
     const Cities = allCity();
 
-    const [items, setItems] = useState(Products);
+    const [items, setItems] = useState(products);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
     const indexOfLastPost = currentPage * postsPerPage;
@@ -56,11 +58,11 @@ const ShopService = () => {
     };
       
     const applyFilters = () => {
-        let updatedList = Products;
+        let updatedList = products;
         if (0 <= gheimat || range !== '') {
             updatedList = updatedList.filter( (item) => item.price >= gheimat && item.price <= range);
         } else {
-            updatedList = Products;
+            updatedList = products;
         }
     
         setItems(updatedList);
@@ -111,7 +113,7 @@ const ShopService = () => {
                           <span><BsListTask /></span>
                           <select>
                               <option>دسته بندی ها</option>
-                              {Products.map((item) => (
+                              {items.map((item) => (
                                   <option key={item.id}>{item.group}</option>
                               ))}
                           </select>
@@ -126,13 +128,15 @@ const ShopService = () => {
                     {currentPosts.map((item, index) => (
                         <div className={styles.item} key={index} >
                           <div className={styles.boximg}>
-                              <Image src={item.image} alt={item.title} />
+                              {
+                                  item.image && <Image src={item.image} alt={item.title} />
+                              }
                           </div>
                           <div className={styles.boxdata}>
                             <Link href={`/shopservice/${item.id}`} passHref>
                                 <h2 className={styles.title}>{item.title}</h2>
                             </Link>
-                            <span className={styles.price}>{item.price} تومان</span>
+                            <span className={styles.price}>{separate(item.price)} تومان</span>
                             <span className={styles.group}>{item.group}</span>
                             <h5><MdLocationOn /> {item.city}</h5>
                           </div>
@@ -142,7 +146,7 @@ const ShopService = () => {
                     </div>
                     <Pagination
                         postsPerPage={postsPerPage}
-                        totalPosts={Products.length}
+                        totalPosts={products.length}
                         paginate={paginate}
                         nextPage={nextPage}
                         prevPage={prevPage}
@@ -154,5 +158,8 @@ const ShopService = () => {
         </Fragment>
     )
 }
+const mapStateToProps = state => ({
+    products: state.adsReducer.list
+})
 
-export default ShopService;
+export default connect(mapStateToProps)(ShopService);
