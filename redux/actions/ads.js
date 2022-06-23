@@ -5,9 +5,19 @@ const adsActions = {
     (data = {}) =>
     async (dispatch) =>
       await _dataManager.get("ads/ad-categories/", data, { dispatch }),
-  getList: 
-  (data = {}) => async dispatch => await _dataManager.get('ads/ads/', data, { dispatch }),   
-  getInfo: (data = {}) => async dispatch => await _dataManager.get(`ads/ads/${data?.id}/`, data, {dispatch}),
+  getList:
+    (data = {}) =>
+    async (dispatch) =>
+      await _dataManager.get("ads/ads/", data, { dispatch }),
+  getInfo:
+    (data = {}) =>
+    async (dispatch) =>
+      await _dataManager.get(`ads/ads/${data?.id}/`, data, { dispatch }),
+
+  postNewAd:
+    (data = {}) =>
+    async (dispatch) =>
+      await _dataManager.post("ads/ads/", data, { dispatch }),
 
   chooseCategory: (catId, PId) => async (dispatch) => {
     await dispatch({
@@ -18,7 +28,6 @@ const adsActions = {
       },
     });
   },
-  
 };
 
 export default adsActions;

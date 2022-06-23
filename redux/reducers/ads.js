@@ -6,6 +6,9 @@ const initialState = {
   categories: [],
   list: [],
   info: {},
+  status: {
+    proclamationSucceeded: false,
+  }
 };
 
 export default function adsReducer(state = initialState, action) {
@@ -17,9 +20,20 @@ export default function adsReducer(state = initialState, action) {
         categories: payload.results,
       };
       case 'ads/ads/':
-        return {
-          ...state, 
-          list: payload.results,
+        if(payload.results){
+          return {
+            ...state, 
+            list: payload.results,
+          }
+        }
+        if(payload.id){
+          return {
+            ...state, 
+            status: {
+              ...state.status,
+              proclamationSucceeded: true
+            },
+          }
         }
         case `ads/ads/${payload?.id}/`:
           return {

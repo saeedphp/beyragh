@@ -10,7 +10,7 @@ const ProclamationSuccess = () => {
         <p>اطلاعات با موفقیت ثبت شد. پس از بررسی و تایید آگهی شما ثبت خواهد شد</p>
       </div>
       <div className="text-xl mt-16 font-bold">
-        <Link href="/products">بازگشت به صفحه بازار و خدمات</Link>
+        <Link href="/shopservice">بازگشت به صفحه بازار و خدمات</Link>
       </div>
     </div>
   );

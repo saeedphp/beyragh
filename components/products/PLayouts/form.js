@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { BiEdit } from "react-icons/bi";
 import Input from "../../form/input";
@@ -7,12 +7,14 @@ import File from "../../form/file";
 import TextBox from "../../form/textBox";
 import Link from "next/link";
 import FormMap from "../../form/map";
+import { adsActions } from "../../../redux/actions";
 
 const SubmitProclamation = ({
   choosedCategory,
   choosedCatParentId,
   categories,
   lastStep,
+  postNewAd,
 }) => {
   const categoryTitle =
     choosedCatParentId == null
@@ -25,14 +27,28 @@ const SubmitProclamation = ({
   )?.title;
 
   const [adPrimaryVal, setAdPrimaryVal] = useState({
-    title: "",
+    title: null,
     phoneNumber: "",
     state: "",
     city: "",
     cityZone: "",
     images: [],
-    price: "",
+    price: null,
+    description: null,
   });
+
+  const sendAdd = () => {
+    if(adPrimaryVal.title && adPrimaryVal.price){
+      postNewAd({
+        is_active: true,
+        title: adPrimaryVal.title,
+        description: adPrimaryVal.description,
+        price: adPrimaryVal.price,
+        related_user: 1,
+      });
+    }
+  };
+
   return (
     <div className=" bg-white w-1/3 max-w-3xl rounded-lg shadow-md p-6 px-10 flex flex-col items-center">
       <h1 className="w-full text-right font-bold text-xl text-red49">
@@ -53,7 +69,10 @@ const SubmitProclamation = ({
         </button>
       </div>
       <form className="w-full flex flex-col mt-6">
-        <Input title="عنوان و نام محصول" />
+        <Input title="عنوان و نام محصول" 
+        value={adPrimaryVal.title}
+        onChange={(e) => setAdPrimaryVal({...adPrimaryVal, title: e.target.value})}
+        />
         <Input title="شماره تماس" />
         <Select title="استان - شهر" />
         <Select title="محدوده آگهی" />
@@ -79,14 +98,31 @@ const SubmitProclamation = ({
         <Select title="برند و مدل" />
         <Select title="وضعیت" />
         <Select title="فیچر اصلی" />
-        <TextBox title="توضیحات اضافی محصول" />
+        <TextBox
+          title="توضیحات اضافی محصول"
+          value={adPrimaryVal.description}
+          onChange={(e) =>
+            setAdPrimaryVal({ ...adPrimaryVal, description: e.target.value })
+          }
+        />
 
-        <button className="rounded-lg w-full h-14 shadow text-lg flex items-center justify-center text-white bg-red49 my-3">
+        <p
+          className="rounded-lg w-full h-14 shadow text-lg flex items-center justify-center text-white bg-red49 my-3"
+          onClick={() => postNewAd({
+            is_active: true,
+            title: adPrimaryVal.title,
+            description: adPrimaryVal.description,
+            price: parseInt(adPrimaryVal.price.replace(',', '')),
+            related_user: 1,
+          })}
+        >
           ارسال آگهی
-        </button>
+        </p>
 
         <div className="w-full flex justify-center">
-          <Link href='/shopservice' className="text-red49 my-3 ">انصراف</Link>
+          <Link href="/shopservice" className="text-red49 my-3 ">
+            انصراف
+          </Link>
         </div>
       </form>
     </div>
@@ -97,4 +133,7 @@ const mapStateToProps = (state) => ({
   choosedCatParentId: state.adsReducer.choosedCatPId,
   categories: state.adsReducer.categories,
 });
-export default connect(mapStateToProps)(SubmitProclamation);
+const mapDispatchToProps = {
+  postNewAd: adsActions.postNewAd,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(SubmitProclamation);
