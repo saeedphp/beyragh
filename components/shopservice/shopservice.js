@@ -88,7 +88,7 @@ const ShopService = () => {
                           </span>
                       </div>
                       <div className={styles.btn}>
-                          <Link href="/cart">
+                          <Link href="/shopservice/proclamation">
                             <Button className={styles.button} >
                                 <Add />
                                 ثبت آگهی

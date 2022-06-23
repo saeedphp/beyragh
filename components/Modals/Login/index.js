@@ -8,8 +8,8 @@ import RegisterModalLayout from "./register";
 const LoginModal = ({loginModalStatus, loginModalControler, isLogin}) => {
     const [type, setType] = useState(0);
     const typeLayout = [
-        <LoginModalLayout changeType={() => setType(1)} closeModal={() => loginModalControler(false)}/>,
-        <RegisterModalLayout changeType={() => setType(0)} closeModal={() => loginModalControler(false)}/>
+        <LoginModalLayout changeType={() => setType(1)} closeModal={() => loginModalControler(false)} key={`LOGIN_MODAL`}/>,
+        <RegisterModalLayout changeType={() => setType(0)} closeModal={() => loginModalControler(false)} key={`REGISTER_MODAL`}/>
     ]
     return(
         loginModalStatus && !isLogin ? (

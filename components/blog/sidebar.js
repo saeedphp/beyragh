@@ -5,8 +5,9 @@ import SearchSidebar from "../icons/search-sidebar";
 import Search from "./search";
 import SidebarBlog from "../icons/sidebar-blog";
 import Link from "next/link";
+import { connect } from "react-redux";
 
-const Sidebar = () => {
+const Sidebar = ({list}) => {
     return (
       <Fragment>
           <div className={styles.sidebar}>
@@ -21,83 +22,17 @@ const Sidebar = () => {
                       آخرین مقالات
                   </h3>
                   <ul className={styles.list}>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
+                  {
+                         list?.map((itm) => (
+                            <li className={styles.item} key={`BLOG_POST_LAST__${itm.id}`}>
+                            <Link href={`/blog/${itm.id}`}>
+                                <a>
+                                    {itm.title}
+                                </a>
+                            </Link>
+                        </li>
+                         ))
+                     }
                   </ul>
               </Card>
               <Card className={styles.card}>
@@ -108,83 +43,18 @@ const Sidebar = () => {
                       پربازدیدترین مقالات
                   </h3>
                   <ul className={styles.list}>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
-                      <li className={styles.item}>
-                          <Link href="/">
-                              <a>
-                                  آیتم اول
-                              </a>
-                          </Link>
-                      </li>
+                     {
+                         list?.map((itm) => (
+                            <li className={styles.item} key={`BLOG_POST_MOST_VIEWED__${itm.id}`}>
+                            <Link href={`/blog/${itm.id}`}>
+                                <a>
+                                    {itm.title}
+                                </a>
+                            </Link>
+                        </li>
+                         ))
+                     }
+                     
                   </ul>
               </Card>
 
@@ -192,5 +62,7 @@ const Sidebar = () => {
       </Fragment>
     );
 };
-
-export default Sidebar;
+const mapStateToProps = state => ({
+    list:state.blogReducer.list
+})
+export default connect(mapStateToProps)(Sidebar);

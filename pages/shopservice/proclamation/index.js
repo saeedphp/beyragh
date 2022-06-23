@@ -2,7 +2,7 @@ import axios from "axios";
 import {Fragment, useEffect} from "react";
 import Proclamation from "../../../components/products/Proclamation";
 import adsActions from "../../../redux/actions/ads";
-import { ApiConfig } from "../../../redux/constants";
+
 
 import { wrapper } from "../../../redux/store";
 

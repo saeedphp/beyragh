@@ -3,17 +3,18 @@ import {useRouter} from "next/router";
 import {allBlogs} from "../../data/blog";
 import {allEntertainments} from "../../data/service/entertainment";
 import Detail from "../../components/blog/detail";
+import { blogActions } from "../../redux/actions";
+import { wrapper } from "../../redux/store";
+import { connect } from "react-redux";
 
-const BlogDetailPage = () => {
+
+const BlogDetailPage = ({currBlog}) => {
 
     const blogs = allBlogs();
     const router = useRouter();
     const {blogId} = router.query;
-    let currBlog;
-    for (let blog of blogs) {
-        if (blog.id === blogId) currBlog = blog;
-    }
-    if (currBlog != undefined) {
+
+    if (currBlog.id) {
         return (
             <Detail currBlog={currBlog} />
         );
@@ -27,6 +28,21 @@ const BlogDetailPage = () => {
             </>
         );
 };
+export const getServerSideProps = wrapper.getServerSideProps(store => async ({ query }) => {
+    console.log('store state on the server before dispatch', store.getState());
+      await store.dispatch(blogActions.getInfo({id: query.blogId}));
+      console.log('store state on the server after dispatch', store.getState());
+  
+    
+    return {
+      props: {
+        
+      }
+    };
+  });
+const mapStateToProps = state => ({
+    currBlog: state.blogReducer.info
+})
 
 BlogDetailPage.layout = "L1"
-export default BlogDetailPage;
+export default connect(mapStateToProps)(BlogDetailPage);

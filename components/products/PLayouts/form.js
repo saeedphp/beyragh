@@ -86,7 +86,7 @@ const SubmitProclamation = ({
         </button>
 
         <div className="w-full flex justify-center">
-          <Link href='/' className="text-red49 my-3 ">انصراف</Link>
+          <Link href='/shopservice' className="text-red49 my-3 ">انصراف</Link>
         </div>
       </form>
     </div>

@@ -12,18 +12,20 @@ const BlogItem = (props) => {
 
     return (
         <div className={styles.items}>
-            <Link href={link}>
+            {
+                image && <Link href={link}>
                 <a>
                     <Image src={`/${imgPath}`} alt={title} layout={"fill"} />
                 </a>
             </Link>
+            }
             <div className={styles.meta}>
                 <h4 className={styles.category}>
                     {category}
                 </h4>
                 <time className={styles.time}>
                     <Date />
-                    {date}
+                    {date.slice(0,10).replace(/-/g,"/")}
                 </time>
             </div>
             <Link href={link}>

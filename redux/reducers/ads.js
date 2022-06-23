@@ -18,11 +18,11 @@ export default function adsReducer(state = initialState, action) {
       if (!payload) {
         return state;
       } else {
-        let parentCats = payload.adsReducer.categories.filter(item => item.related_ad_category == null);
-        let structuredCats = [...parentCats.map((category => (
+        let parentCats = payload.adsReducer.categories?.results?.filter(item => item.related_ad_category == null);
+        let structuredCats = parentCats && parentCats?.length > 0 && [...parentCats?.map((category => (
           {
             ...category,
-            subCategories: payload.adsReducer.categories.filter(itm => itm.related_ad_category == category.id)
+            subCategories: payload.adsReducer.categories.results.filter(itm => itm.related_ad_category == category.id)
           }
         )))];
         return {
